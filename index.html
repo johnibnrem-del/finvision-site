@@ -58,9 +58,9 @@
 
         <div class="hero-badge" data-animate>
           <span class="badge-dot"></span>
-          <span data-i18n="hero.badge">60 дней бесплатно</span>
+          <span data-i18n="hero.badge">30 дней бесплатно</span>
           <span style="color:var(--faint);margin-left:4px">·</span>
-          <span style="color:var(--faint);font-size:12px">без карты</span>
+          <span style="color:var(--faint);font-size:12px" data-i18n="hero.no_card">без карты</span>
         </div>
 
         <h1 class="hero-title" data-animate data-delay="80">
@@ -92,7 +92,7 @@
             <div class="stat-label" data-i18n="stats.currencies">валют</div>
           </div>
           <div class="stat">
-            <div class="stat-val" data-count="60">60</div>
+            <div class="stat-val" data-count="30">30</div>
             <div class="stat-label" data-i18n="stats.free">дней бесплатно</div>
           </div>
         </div>
@@ -106,17 +106,17 @@
         <div class="hero-badge-float float float-d1"
              style="top:-20px;right:10px;z-index:10">
           <span class="hbf-dot hbf-green"></span>
-          <span>✓ Чек сохранён — ₽1,247</span>
+          <span data-i18n="badge.saved">✓ Чек сохранён — ₽1,247</span>
         </div>
         <div class="hero-badge-float float float-d2"
              style="bottom:40px;left:-30px;z-index:10">
           <span class="hbf-dot hbf-violet"></span>
-          <span>📊 Кафе +34% vs апрель</span>
+          <span data-i18n="badge.cafe">📊 Кафе +34% vs апрель</span>
         </div>
         <div class="hero-badge-float float-sm float-d3"
              style="top:38%;right:-20px;z-index:10">
           <span class="hbf-dot hbf-sky"></span>
-          <span>🧠 Gemma 4 · 3.2с</span>
+          <span data-i18n="badge.gemma">🧠 Gemma 4 · 3.2с</span>
         </div>
 
         <!-- Phone mockup -->
@@ -139,15 +139,15 @@
                   <div class="receipt-card">
                     <div class="rc-top">
                       <span class="rc-check">✓</span>
-                      <span class="rc-title">Чек распознан</span>
+                      <span class="rc-title" data-i18n="phone.receipt_title">Чек распознан</span>
                     </div>
-                    <div class="rc-row"><span class="rc-k">Магазин</span><span class="rc-v">Магнит</span></div>
-                    <div class="rc-row"><span class="rc-k">Сумма</span><span class="rc-v">₽1,247</span></div>
-                    <div class="rc-row"><span class="rc-k">Категория</span><span class="rc-v rc-cat">🛒 Продукты</span></div>
-                    <div class="rc-row"><span class="rc-k">Дата</span><span class="rc-v">28 мая</span></div>
+                    <div class="rc-row"><span class="rc-k" data-i18n="phone.store">Магазин</span><span class="rc-v" data-i18n="phone.magnit">Магнит</span></div>
+                    <div class="rc-row"><span class="rc-k" data-i18n="phone.amount">Сумма</span><span class="rc-v">₽1,247</span></div>
+                    <div class="rc-row"><span class="rc-k" data-i18n="phone.category">Категория</span><span class="rc-v rc-cat" data-i18n="phone.cat_groceries">🛒 Продукты</span></div>
+                    <div class="rc-row"><span class="rc-k" data-i18n="phone.date_label">Дата</span><span class="rc-v" data-i18n="phone.date_val">28 мая</span></div>
                     <div class="rc-actions">
-                      <button class="rc-btn rc-save">✓ Сохранить</button>
-                      <button class="rc-btn rc-edit">Изменить</button>
+                      <button class="rc-btn rc-save" data-i18n="phone.save">✓ Сохранить</button>
+                      <button class="rc-btn rc-edit" data-i18n="phone.edit">Изменить</button>
                     </div>
                   </div>
                 </div>
@@ -155,12 +155,12 @@
                   <div class="receipt-card" style="background:rgba(124,58,237,0.08)">
                     <div class="rc-top" style="margin-bottom:10px">
                       <span style="color:#a78bfa">📊</span>
-                      <span class="rc-title">Отчёт за май</span>
+                      <span class="rc-title" data-i18n="phone.report_title">Отчёт за май</span>
                     </div>
-                    <div class="rc-row"><span class="rc-k">Всего</span><span class="rc-v">₽45,230</span></div>
-                    <div class="rc-row"><span class="rc-k">Продукты</span><span class="rc-v">34%</span></div>
+                    <div class="rc-row"><span class="rc-k" data-i18n="phone.total">Всего</span><span class="rc-v">₽45,230</span></div>
+                    <div class="rc-row"><span class="rc-k" data-i18n="phone.groceries_label">Продукты</span><span class="rc-v">34%</span></div>
                     <div class="rc-row" style="margin-top:6px;padding-top:6px;border-top:1px solid rgba(255,255,255,.07)">
-                      <span style="font-size:11px;color:#f87171">↑ Кафе +34% vs апрель</span>
+                      <span style="font-size:11px;color:#f87171" data-i18n="phone.cafe_trend">↑ Кафе +34% vs апрель</span>
                     </div>
                   </div>
                 </div>
@@ -187,7 +187,7 @@
         <span class="proof-label" data-i18n="proof.agents">специализированных AI-агентов</span>
       </div>
       <div class="proof-item">
-        <span class="proof-num">&lt;3с</span>
+        <span class="proof-num" data-i18n="proof.speed_val">&lt;3с</span>
         <span class="proof-label" data-i18n="proof.speed">среднее время ответа</span>
       </div>
       <div class="proof-item">
@@ -773,7 +773,7 @@
       <!-- Monthly -->
       <div class="pricing-card tilt" data-animate data-delay="80">
         <div class="pricing-name" data-i18n="pricing.p2_name">Ежемесячный</div>
-        <div class="pricing-price">$2<span style="font-size:24px;font-weight:500">.50</span></div>
+        <div class="pricing-price">$3<span style="font-size:24px;font-weight:500">.99</span></div>
         <div class="pricing-period" data-i18n="pricing.p2_period">в месяц</div>
         <div class="pricing-divider"></div>
         <ul class="pricing-features">
@@ -790,7 +790,7 @@
       <div class="pricing-card highlight tilt" data-animate data-delay="160">
         <div class="pricing-badge">⭐ <span data-i18n="pricing.p3_badge">Лучший выбор</span></div>
         <div class="pricing-name" data-i18n="pricing.p3_name">Годовой</div>
-        <div class="pricing-price">$26<span style="font-size:24px;font-weight:500">.40</span></div>
+        <div class="pricing-price">$44<span style="font-size:24px;font-weight:500">.00</span></div>
         <div class="pricing-period" data-i18n="pricing.p3_period">в год</div>
         <div class="pricing-save" data-i18n="pricing.p3_save">Экономия 12% · $2.20/мес</div>
         <div class="pricing-divider"></div>

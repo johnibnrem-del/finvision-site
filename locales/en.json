@@ -6,7 +6,8 @@
     "cta": "Try for free"
   },
   "hero": {
-    "badge": "60 days free",
+    "badge": "30 days free",
+    "no_card": "no card",
     "title_1": "Stop losing track",
     "title_2": "of your money",
     "subtitle": "Snap a photo of your receipt — FinVision does the rest. The first AI bot that tracks every expense without a single tap.",
@@ -22,8 +23,30 @@
   "proof": {
     "telegram": "Telegram users",
     "agents": "specialised AI agents",
+    "speed_val": "<3s",
     "speed": "average response time",
     "accuracy": "recognition accuracy"
+  },
+  "phone": {
+    "receipt_title": "Receipt recognised",
+    "store": "Store",
+    "magnit": "Magnit",
+    "amount": "Amount",
+    "category": "Category",
+    "cat_groceries": "🛒 Groceries",
+    "date_label": "Date",
+    "date_val": "May 28",
+    "save": "✓ Save",
+    "edit": "Edit",
+    "report_title": "May Report",
+    "total": "Total",
+    "groceries_label": "Groceries",
+    "cafe_trend": "↑ Café +34% vs April"
+  },
+  "badge": {
+    "saved": "✓ Receipt saved — ₽1,247",
+    "cafe": "📊 Café +34% vs April",
+    "gemma": "🧠 Gemma 4 · 3.2s"
   },
   "pain": {
     "label": "You're not alone",
@@ -171,16 +194,16 @@
     "subtitle": "Start free. No credit card. Cancel anytime.",
     "p1_name": "Free trial",
     "p1_price": "Free",
-    "p1_period": "60 days",
+    "p1_period": "30 days",
     "p1_cta": "Start for free",
     "p2_name": "Monthly",
-    "p2_price": "$2.50",
+    "p2_price": "$3.99",
     "p2_period": "per month",
     "p2_cta": "Choose plan",
     "p3_name": "Annual",
-    "p3_price": "$26.40",
+    "p3_price": "$44.00",
     "p3_period": "per year",
-    "p3_save": "Save 12% · $2.20/mo",
+    "p3_save": "Save 8% · $3.67/mo",
     "p3_badge": "Best value",
     "p3_cta": "Best value",
     "f1": "All features, no limits",
