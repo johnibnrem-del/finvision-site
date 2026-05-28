@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FinVision AI — Brand Guidelines</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#09090b;--surface:#111113;--surface-hi:#1a1a1f;
+  --border:rgba(255,255,255,0.07);--border-hi:rgba(255,255,255,0.14);
+  --violet:#7c3aed;--indigo:#4f46e5;--sky:#0ea5e9;
+  --grad:linear-gradient(135deg,#7c3aed,#4f46e5,#0ea5e9);
+  --grad-text:linear-gradient(135deg,#a78bfa,#818cf8,#38bdf8);
+  --text:#fafafa;--muted:#a1a1aa;--faint:#52525b;
+  --green:#22c55e;--amber:#f59e0b;--red:#ef4444;
+  --font:'Inter',-apple-system,sans-serif;
+  --mono:'JetBrains Mono',monospace;
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.6}
+
+/* ── PROGRESS ── */
+#progress{position:fixed;top:0;left:240px;right:0;height:2px;background:var(--grad);transform-origin:left;transform:scaleX(0);z-index:300;transition:transform .08s}
+
+/* ── SIDEBAR ── */
+.sidebar{position:fixed;top:0;left:0;bottom:0;width:240px;background:var(--surface);border-right:1px solid var(--border);display:flex;flex-direction:column;z-index:200;overflow-y:auto}
+.sidebar::-webkit-scrollbar{width:4px}
+.sidebar::-webkit-scrollbar-track{background:transparent}
+.sidebar::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.1);border-radius:2px}
+.sb-logo{padding:28px 24px 20px;border-bottom:1px solid var(--border)}
+.sb-brand{font-size:15px;font-weight:800;background:var(--grad-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.sb-sub{font-size:11px;color:var(--faint);margin-top:3px;font-family:var(--mono)}
+.sb-nav{padding:12px 0;flex:1}
+.sb-group{font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);padding:12px 24px 4px}
+.sb-link{display:flex;align-items:center;gap:10px;padding:7px 24px;font-size:13px;color:var(--muted);text-decoration:none;cursor:pointer;transition:all .18s;border-left:2px solid transparent}
+.sb-link:hover{color:var(--text);background:rgba(255,255,255,0.03)}
+.sb-link.active{color:var(--text);background:rgba(124,58,237,0.08);border-left-color:var(--violet)}
+.sb-num{font-size:10px;color:var(--faint);font-family:var(--mono);min-width:20px}
+
+/* ── MAIN ── */
+.main{margin-left:240px}
+
+/* ── COVER ── */
+.cover{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:80px;position:relative;overflow:hidden;border-bottom:1px solid var(--border)}
+.cover::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,0.045) 1px,transparent 1px);background-size:28px 28px;pointer-events:none}
+.cover-glow{position:absolute;top:-200px;left:-100px;width:700px;height:700px;background:radial-gradient(circle,rgba(124,58,237,.14) 0%,transparent 65%);pointer-events:none}
+.cover-glow2{position:absolute;bottom:-100px;right:0;width:500px;height:500px;background:radial-gradient(circle,rgba(14,165,233,.09) 0%,transparent 65%);pointer-events:none}
+.cover-line{position:absolute;bottom:0;left:0;right:0;height:1px;background:var(--grad)}
+
+
+.cover-eyebrow{font-size:11px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--faint);margin-bottom:16px}
+.cover-title{font-size:clamp(52px,7vw,88px);font-weight:800;line-height:1;letter-spacing:-.02em;margin-bottom:12px}
+.cover-title .g{background:var(--grad-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.cover-sub{font-size:18px;color:var(--muted);font-weight:400;max-width:500px;margin-bottom:56px;line-height:1.6}
+.cover-meta{display:flex;gap:40px}
+.cm-item{display:flex;flex-direction:column;gap:4px}
+.cm-label{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--faint)}
+.cm-value{font-size:13px;color:var(--muted);font-family:var(--mono)}
+
+/* ── SECTION ── */
+.section{padding:100px 80px;border-bottom:1px solid var(--border);position:relative;overflow:hidden}
+.sec-num{position:absolute;top:32px;right:72px;font-size:140px;font-weight:800;color:rgba(255,255,255,.025);font-family:var(--mono);line-height:1;user-select:none;pointer-events:none}
+.sec-eye{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--violet);margin-bottom:12px}
+.sec-title{font-size:clamp(28px,3.5vw,42px);font-weight:700;margin-bottom:14px;line-height:1.1;letter-spacing:-.01em}
+.sec-desc{font-size:16px;color:var(--muted);max-width:580px;line-height:1.75;margin-bottom:64px}
+.g{background:var(--grad-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+
+/* ── GRIDS ── */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px}
+.g4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:16px}
+.g5{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+
+/* ── CARDS ── */
+.card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:24px}
+.card-sm{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px}
+.card-label{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin-bottom:20px}
+.divider{height:1px;background:var(--border);margin:48px 0}
+
+/* ── COLOR SWATCHES ── */
+.swatch{border-radius:12px;overflow:hidden;border:1px solid var(--border)}
+.swatch-bg{height:80px}
+.swatch-info{padding:12px 14px;background:var(--surface-hi);border-top:1px solid var(--border)}
+.swatch-name{font-size:13px;font-weight:600}
+.swatch-hex{font-size:11px;color:var(--faint);font-family:var(--mono);margin-top:2px}
+.swatch-use{font-size:11px;color:var(--faint);margin-top:3px;line-height:1.4}
+.grad-swatch{border-radius:12px;overflow:hidden;border:1px solid var(--border)}
+.grad-bg{height:100px}
+
+/* ── TYPOGRAPHY SPECIMENS ── */
+.type-row{padding:28px 0;border-bottom:1px solid var(--border);display:flex;flex-direction:column;gap:10px}
+.type-row:last-child{border-bottom:none}
+.type-meta{display:flex;align-items:center;gap:20px}
+.type-tag{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);font-family:var(--mono);min-width:80px}
+.type-spec{font-size:11px;color:var(--faint);font-family:var(--mono)}
+.t-display{font-size:72px;font-weight:800;line-height:1;letter-spacing:-.02em}
+.t-h1{font-size:clamp(40px,5vw,56px);font-weight:700;line-height:1.05;letter-spacing:-.015em}
+.t-h2{font-size:clamp(28px,3vw,40px);font-weight:700;line-height:1.1}
+.t-h3{font-size:32px;font-weight:600;line-height:1.15}
+.t-h4{font-size:24px;font-weight:600}
+.t-h5{font-size:20px;font-weight:600}
+.t-body-lg{font-size:18px;font-weight:400;line-height:1.7;color:var(--muted);max-width:600px}
+.t-body{font-size:16px;font-weight:400;line-height:1.7;color:var(--muted);max-width:600px}
+.t-sm{font-size:14px;font-weight:400;color:var(--muted)}
+.t-caption{font-size:12px;font-weight:500;color:var(--faint)}
+.t-micro{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--faint)}
+
+/* ── SPACING SCALE ── */
+.sp-row{display:flex;align-items:center;gap:20px;margin-bottom:10px}
+.sp-val{font-size:12px;font-family:var(--mono);color:var(--muted);min-width:52px}
+.sp-bar{height:8px;border-radius:4px;background:var(--grad);flex-shrink:0}
+.sp-use{font-size:12px;color:var(--faint)}
+
+/* ── RADIUS DEMO ── */
+.radius-wrap{display:flex;align-items:flex-end;gap:20px;flex-wrap:wrap}
+.radius-box{background:rgba(124,58,237,.12);border:1px solid rgba(124,58,237,.3);display:flex;flex-direction:column;align-items:center;justify-content:center;width:72px;height:72px}
+.radius-label{font-size:10px;font-family:var(--mono);color:var(--faint);text-align:center;margin-top:8px;line-height:1.4}
+
+/* ── GLOW DEMO ── */
+.glow-demo{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-bottom:0}
+.glow-box{padding:40px 20px;background:var(--surface);border-radius:16px;border:1px solid var(--border);display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center}
+.glow-sq{width:56px;height:56px;border-radius:12px}
+.glow-name{font-size:13px;font-weight:600}
+.glow-css{font-size:11px;font-family:var(--mono);color:var(--faint);line-height:1.5}
+
+/* ── BUTTONS ── */
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--font);font-weight:600;border:none;cursor:pointer;transition:all .2s;text-decoration:none;white-space:nowrap}
+.btn-primary{background:var(--grad);color:#fff;border-radius:10px;padding:11px 22px;font-size:14px}
+.btn-primary:hover{box-shadow:0 0 28px rgba(124,58,237,.5);transform:translateY(-1px)}
+.btn-primary.lg{font-size:16px;padding:15px 30px;border-radius:12px}
+.btn-primary.sm{font-size:12px;padding:7px 14px;border-radius:8px}
+.btn-secondary{background:transparent;color:var(--text);border:1px solid var(--border-hi);border-radius:10px;padding:11px 22px;font-size:14px}
+.btn-secondary:hover{border-color:rgba(124,58,237,.5);background:rgba(124,58,237,.06)}
+.btn-secondary.lg{font-size:16px;padding:15px 30px;border-radius:12px}
+.btn-ghost{background:transparent;color:var(--muted);border-radius:10px;padding:11px 16px;font-size:14px;border:none}
+.btn-ghost:hover{color:var(--text)}
+.comp-row{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:28px;background:var(--surface);border-radius:14px;border:1px solid var(--border);margin-bottom:20px}
+.comp-label{font-size:11px;font-family:var(--mono);color:var(--faint);margin-bottom:14px}
+
+/* ── BADGES ── */
+.badge{display:inline-flex;align-items:center;font-size:12px;font-weight:600;padding:4px 12px;border-radius:9999px}
+.b-violet{background:rgba(124,58,237,.14);color:#a78bfa;border:1px solid rgba(124,58,237,.25)}
+.b-sky{background:rgba(14,165,233,.1);color:#38bdf8;border:1px solid rgba(14,165,233,.2)}
+.b-green{background:rgba(34,197,94,.1);color:#4ade80;border:1px solid rgba(34,197,94,.2)}
+.b-amber{background:rgba(245,158,11,.1);color:#fbbf24;border:1px solid rgba(245,158,11,.2)}
+.b-neutral{background:rgba(255,255,255,.05);color:var(--muted);border:1px solid var(--border)}
+
+/* ── DEMO CARDS ── */
+.demo-card-glass{background:rgba(255,255,255,.04);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:24px}
+.demo-card-glow{background:rgba(255,255,255,.04);backdrop-filter:blur(20px);border-radius:16px;padding:24px;position:relative}
+.demo-card-glow::before{content:'';position:absolute;inset:0;border-radius:16px;padding:1px;background:var(--grad);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude}
+
+/* ── VALUE CARDS ── */
+.val-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:28px;transition:border-color .3s}
+.val-card:hover{border-color:rgba(124,58,237,.3)}
+.val-icon{font-size:28px;margin-bottom:14px}
+.val-name{font-size:17px;font-weight:700;margin-bottom:8px}
+.val-desc{font-size:14px;color:var(--muted);line-height:1.6}
+
+/* ── MOTION ── */
+.dur-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:48px}
+.dur-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:24px;text-align:center}
+.dur-val{font-size:26px;font-weight:700;background:var(--grad-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:8px}
+.dur-name{font-size:12px;font-weight:600;margin-bottom:4px}
+.dur-use{font-size:11px;color:var(--faint)}
+
+.ease-row{display:flex;align-items:center;gap:24px;padding:18px 0;border-bottom:1px solid var(--border)}
+.ease-row:last-child{border-bottom:none}
+.ease-name{font-size:13px;font-weight:600;min-width:110px}
+.ease-curve{flex-shrink:0}
+.ease-val{font-size:12px;font-family:var(--mono);color:var(--faint)}
+.ease-note{font-size:12px;color:var(--faint);margin-left:auto}
+
+/* ── VOICE ── */
+.voice-ex{padding:16px 20px;border-radius:10px;margin-bottom:10px}
+.voice-good{background:rgba(34,197,94,.05);border:1px solid rgba(34,197,94,.14)}
+.voice-bad{background:rgba(239,68,68,.05);border:1px solid rgba(239,68,68,.14)}
+.voice-tag{font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px}
+.vt-g{color:#4ade80}.vt-b{color:#f87171}
+.voice-text{font-size:14px;line-height:1.6}
+
+/* ── DON'TS ── */
+.donts-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.dont-card{border-radius:14px;padding:24px}
+.dont-bad{background:rgba(239,68,68,.05);border:1px solid rgba(239,68,68,.14)}
+.dont-good{background:rgba(34,197,94,.05);border:1px solid rgba(34,197,94,.14)}
+.dont-label{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px}
+.dl-bad{color:#f87171}.dl-good{color:#4ade80}
+
+/* ── LOGO SIZES ── */
+.logo-sizes{display:flex;align-items:center;gap:40px;flex-wrap:wrap;padding:40px;background:var(--surface);border-radius:16px;border:1px solid var(--border)}
+.ls-item{display:flex;flex-direction:column;align-items:center;gap:10px}
+.ls-meta{font-size:10px;font-family:var(--mono);color:var(--faint);text-align:center;line-height:1.5}
+
+/* ── WEIGHTS ── */
+.w-row{display:flex;align-items:baseline;gap:20px;padding:14px 0;border-bottom:1px solid var(--border)}
+.w-row:last-child{border-bottom:none}
+.w-num{font-size:11px;font-family:var(--mono);color:var(--faint);min-width:48px}
+.w-sample{font-size:19px}
+
+/* ── PERSONALITY ── */
+.pers-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.pers-card{padding:20px;background:var(--surface);border-radius:12px;border:1px solid var(--border);text-align:center}
+.pers-word{font-size:20px;font-weight:700;margin-bottom:6px;background:var(--grad-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.pers-not{font-size:11px;color:var(--faint)}
+
+code{font-family:var(--mono);font-size:12px;background:rgba(255,255,255,.07);padding:2px 6px;border-radius:4px;color:#a78bfa}
+
+/* ── BLOCKQUOTE ── */
+blockquote{font-size:clamp(18px,2.5vw,26px);font-weight:300;font-style:italic;line-height:1.55;color:var(--text);border-left:2px solid;border-image:var(--grad) 1;padding-left:28px;max-width:680px}
+
+/* ── ICON GRID ── */
+.icon-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:0;background:var(--surface);border-radius:16px;border:1px solid var(--border);overflow:hidden}
+.icon-cell{display:flex;flex-direction:column;align-items:center;gap:10px;padding:20px 12px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);transition:background .2s}
+.icon-cell:hover{background:rgba(255,255,255,.04)}
+.icon-name{font-size:10px;font-family:var(--mono);color:var(--faint)}
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <div class="sb-logo">
+    <div class="sb-brand">FinVision AI</div>
+    <div class="sb-sub">Brand Guidelines v1.0</div>
+  </div>
+  <nav class="sb-nav">
+    <div class="sb-group">Start</div>
+    <a class="sb-link" href="#cover"><span class="sb-num">00</span>Cover</a>
+    <div class="sb-group">Brand</div>
+    <a class="sb-link" href="#identity"><span class="sb-num">01</span>Brand Identity</a>
+    <a class="sb-link" href="#logo"><span class="sb-num">02</span>Logo</a>
+    <div class="sb-group">Visuals</div>
+    <a class="sb-link" href="#colors"><span class="sb-num">03</span>Color System</a>
+    <a class="sb-link" href="#typography"><span class="sb-num">04</span>Typography</a>
+    <a class="sb-link" href="#spacing"><span class="sb-num">05</span>Spacing & Layout</a>
+    <div class="sb-group">UI Kit</div>
+    <a class="sb-link" href="#components"><span class="sb-num">06</span>Components</a>
+    <a class="sb-link" href="#motion"><span class="sb-num">07</span>Motion</a>
+    <div class="sb-group">Content</div>
+    <a class="sb-link" href="#imagery"><span class="sb-num">08</span>Imagery</a>
+    <a class="sb-link" href="#voice"><span class="sb-num">09</span>Voice & Tone</a>
+    <a class="sb-link" href="#donts"><span class="sb-num">10</span>Don'ts</a>
+  </nav>
+</aside>
+
+<main class="main">
+
+<!-- 00 COVER -->
+<section class="cover" id="cover">
+  <div class="cover-glow"></div>
+  <div class="cover-glow2"></div>
+  <div class="cover-line"></div>
+
+  <div class="cover-eyebrow">Brand Guidelines</div>
+  <h1 class="cover-title">Fin<span class="g">Vision</span></h1>
+  <p class="cover-sub">Visual identity & design system for FinVision AI — the Telegram bot that reads your receipts so you don't have to.</p>
+  <div class="cover-meta">
+    <div class="cm-item"><span class="cm-label">Version</span><span class="cm-value">v1.0</span></div>
+    <div class="cm-item"><span class="cm-label">Date</span><span class="cm-value">2026-05-28</span></div>
+    <div class="cm-item"><span class="cm-label">Audience</span><span class="cm-value">Ages 20–35 · Global</span></div>
+    <div class="cm-item"><span class="cm-label">Platform</span><span class="cm-value">Web · Telegram</span></div>
+  </div>
+</section>
+
+<!-- 01 BRAND IDENTITY -->
+<section class="section" id="identity">
+  <div class="sec-num">01</div>
+  <div class="sec-eye">01 — Brand Identity</div>
+  <h2 class="sec-title">Who we <span class="g">are</span></h2>
+  <p class="sec-desc">FinVision is a financial clarity tool built for a generation that wants answers without friction. We don't lecture. We illuminate.</p>
+
+  <div class="card-label">Mission Statement</div>
+  <blockquote style="margin-bottom:64px">"Make financial clarity effortless — one photo at a time."</blockquote>
+
+  <div class="card-label">Brand Values</div>
+  <div class="g3" style="margin-bottom:56px">
+    <div class="val-card"><div class="val-icon">🧠</div><div class="val-name">Intelligent</div><div class="val-desc">AI does the heavy lifting. Users just live their life and we track what matters.</div></div>
+    <div class="val-card"><div class="val-icon">🔒</div><div class="val-name">Private</div><div class="val-desc">Local AI models by default. Your financial data belongs to you, not to a cloud.</div></div>
+    <div class="val-card"><div class="val-icon">✨</div><div class="val-name">Effortless</div><div class="val-desc">Zero friction from photo to insight. The fastest tracker is the one you actually use.</div></div>
+    <div class="val-card"><div class="val-icon">🌍</div><div class="val-name">Global</div><div class="val-desc">6 languages, 30 currencies, auto-detected locale. Works everywhere Telegram works.</div></div>
+    <div class="val-card"><div class="val-icon">🎯</div><div class="val-name">Precise</div><div class="val-desc">5 specialized agents, not one overloaded model. Each expert in its domain.</div></div>
+  </div>
+
+  <div class="card-label">Brand Personality</div>
+  <div class="pers-grid">
+    <div class="pers-card"><div class="pers-word">Smart</div><div class="pers-not">not nerdy</div></div>
+    <div class="pers-card"><div class="pers-word">Calm</div><div class="pers-not">not cold</div></div>
+    <div class="pers-card"><div class="pers-word">Direct</div><div class="pers-not">not blunt</div></div>
+    <div class="pers-card"><div class="pers-word">Modern</div><div class="pers-not">not trendy</div></div>
+  </div>
+</section>
+
+<!-- 02 LOGO -->
+<section class="section" id="logo">
+  <div class="sec-num">02</div>
+  <div class="sec-eye">02 — Logo</div>
+  <h2 class="sec-title"><span class="g">Logo</span> Wordmark</h2>
+  <p class="sec-desc">The wordmark pairs extrabold "Fin" with regular-weight gradient "Vision". The weight contrast creates hierarchy — the product category (Fin) anchors the name, while the brand promise (Vision) carries the colour.</p>
+
+  <div class="g2" style="margin-bottom:40px">
+    <!-- Dark -->
+    <div style="background:#09090b;border:1px solid var(--border);border-radius:16px;padding:56px 40px;display:flex;flex-direction:column;align-items:center;gap:20px">
+      <div style="display:flex;align-items:baseline">
+        <span style="font-size:36px;font-weight:800;color:#fafafa;letter-spacing:-.015em">Fin</span>
+        <span style="font-size:36px;font-weight:400;letter-spacing:-.015em;background:linear-gradient(135deg,#a78bfa,#38bdf8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Vision</span>
+      </div>
+      <div style="font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint)">On Dark — Primary</div>
+    </div>
+    <!-- Light -->
+    <div style="background:#f1f1f3;border-radius:16px;padding:56px 40px;display:flex;flex-direction:column;align-items:center;gap:20px">
+      <div style="display:flex;align-items:baseline">
+        <span style="font-size:36px;font-weight:800;color:#09090b;letter-spacing:-.015em">Fin</span>
+        <span style="font-size:36px;font-weight:400;letter-spacing:-.015em;background:linear-gradient(135deg,#7c3aed,#0ea5e9);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Vision</span>
+      </div>
+      <div style="font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#71717a">On Light — Alternate</div>
+    </div>
+  </div>
+
+  <div class="card-label">Logo at Different Sizes</div>
+  <div class="logo-sizes">
+    <div class="ls-item">
+      <div style="font-size:11px;font-weight:800;background:var(--grad-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">FV</div>
+      <div class="ls-meta">16px<br>favicon</div>
+    </div>
+    <div class="ls-item">
+      <div style="font-size:14px;font-weight:800">Fin<span style="font-weight:400;background:var(--grad-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Vision</span></div>
+      <div class="ls-meta">14px<br>compact</div>
+    </div>
+    <div class="ls-item">
+      <div style="font-size:20px;font-weight:800">Fin<span style="font-weight:400;background:var(--grad-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Vision</span></div>
+      <div class="ls-meta">20px<br>navbar</div>
+    </div>
+    <div class="ls-item">
+      <div style="font-size:32px;font-weight:800">Fin<span style="font-weight:400;background:var(--grad-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Vision</span></div>
+      <div class="ls-meta">32px<br>hero</div>
+    </div>
+    <div class="ls-item">
+      <div style="font-size:52px;font-weight:800;letter-spacing:-.02em">Fin<span style="font-weight:400;background:var(--grad-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Vision</span></div>
+      <div class="ls-meta">52px<br>display</div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 COLORS -->
+<section class="section" id="colors">
+  <div class="sec-num">03</div>
+  <div class="sec-eye">03 — Color System</div>
+  <h2 class="sec-title">Color <span class="g">System</span></h2>
+  <p class="sec-desc">A restrained palette built around depth and precision. Three brand hues, three background levels, four text levels, three semantic states — and a single master gradient that ties them all together.</p>
+
+  <div class="card-label">Brand Colors</div>
+  <div class="g3" style="margin-bottom:40px">
+    <div class="swatch"><div class="swatch-bg" style="background:#7c3aed"></div><div class="swatch-info"><div class="swatch-name">Violet</div><div class="swatch-hex">#7c3aed</div><div class="swatch-use">Primary · CTAs · key highlights</div></div></div>
+    <div class="swatch"><div class="swatch-bg" style="background:#4f46e5"></div><div class="swatch-info"><div class="swatch-name">Indigo</div><div class="swatch-hex">#4f46e5</div><div class="swatch-use">Mid-gradient · secondary accents</div></div></div>
+    <div class="swatch"><div class="swatch-bg" style="background:#0ea5e9"></div><div class="swatch-info"><div class="swatch-name">Sky</div><div class="swatch-hex">#0ea5e9</div><div class="swatch-use">Accent · tech feel · info states</div></div></div>
+  </div>
+
+  <div class="card-label">Brand Gradients</div>
+  <div class="g2" style="margin-bottom:40px">
+    <div class="grad-swatch"><div class="grad-bg" style="background:linear-gradient(135deg,#7c3aed,#4f46e5,#0ea5e9)"></div><div class="swatch-info"><div class="swatch-name">Primary Gradient</div><div class="swatch-hex">135deg · #7c3aed → #4f46e5 → #0ea5e9</div><div class="swatch-use">Buttons · icons · borders · backgrounds</div></div></div></div>
+    <div class="grad-swatch"><div class="grad-bg" style="background:linear-gradient(135deg,#a78bfa,#818cf8,#38bdf8)"></div><div class="swatch-info"><div class="swatch-name">Text Gradient</div><div class="swatch-hex">135deg · #a78bfa → #818cf8 → #38bdf8</div><div class="swatch-use">Gradient text — headings · logo wordmark</div></div></div>
+  </div>
+
+  <div class="card-label">Background Scale</div>
+  <div class="g3" style="margin-bottom:40px">
+    <div class="swatch"><div class="swatch-bg" style="background:#09090b;border-bottom:1px solid rgba(255,255,255,.06)"></div><div class="swatch-info"><div class="swatch-name">Void</div><div class="swatch-hex">#09090b</div><div class="swatch-use">Page background</div></div></div>
+    <div class="swatch"><div class="swatch-bg" style="background:#111113"></div><div class="swatch-info"><div class="swatch-name">Surface</div><div class="swatch-hex">#111113</div><div class="swatch-use">Cards · sidebar · panels</div></div></div>
+    <div class="swatch"><div class="swatch-bg" style="background:#1a1a1f"></div><div class="swatch-info"><div class="swatch-name">Surface High</div><div class="swatch-hex">#1a1a1f</div><div class="swatch-use">Hover states · nested elements</div></div></div>
+  </div>
+
+  <div class="card-label">Text Scale</div>
+  <div class="g4" style="margin-bottom:40px">
+    <div class="card-sm" style="text-align:center"><div style="font-size:28px;color:#fafafa;font-weight:700;margin-bottom:8px">Aa</div><div style="font-size:11px;font-family:var(--mono);color:var(--faint)">#fafafa</div><div style="font-size:11px;color:var(--faint);margin-top:4px">Primary text</div></div>
+    <div class="card-sm" style="text-align:center"><div style="font-size:28px;color:#a1a1aa;font-weight:700;margin-bottom:8px">Aa</div><div style="font-size:11px;font-family:var(--mono);color:var(--faint)">#a1a1aa</div><div style="font-size:11px;color:var(--faint);margin-top:4px">Body · descriptions</div></div>
+    <div class="card-sm" style="text-align:center"><div style="font-size:28px;color:#52525b;font-weight:700;margin-bottom:8px">Aa</div><div style="font-size:11px;font-family:var(--mono);color:var(--faint)">#52525b</div><div style="font-size:11px;color:var(--faint);margin-top:4px">Labels · metadata</div></div>
+    <div class="card-sm" style="text-align:center"><div style="font-size:28px;color:rgba(255,255,255,.08);font-weight:700;margin-bottom:8px">Aa</div><div style="font-size:11px;font-family:var(--mono);color:var(--faint)">rgba(255,255,255,.07)</div><div style="font-size:11px;color:var(--faint);margin-top:4px">Borders · dividers</div></div>
+  </div>
+
+  <div class="card-label">Semantic Colors</div>
+  <div class="g3">
+    <div class="swatch"><div class="swatch-bg" style="background:#22c55e"></div><div class="swatch-info"><div class="swatch-name">Success</div><div class="swatch-hex">#22c55e</div><div class="swatch-use">Checkmarks · confirmations · ✓ in tables</div></div></div>
+    <div class="swatch"><div class="swatch-bg" style="background:#f59e0b"></div><div class="swatch-info"><div class="swatch-name">Warning / Premium</div><div class="swatch-hex">#f59e0b</div><div class="swatch-use">Pricing highlight · recommended badge</div></div></div>
+    <div class="swatch"><div class="swatch-bg" style="background:#ef4444"></div><div class="swatch-info"><div class="swatch-name">Error</div><div class="swatch-hex">#ef4444</div><div class="swatch-use">Form errors · destructive actions only</div></div></div>
+  </div>
+</section>
+
+<!-- 04 TYPOGRAPHY -->
+<section class="section" id="typography">
+  <div class="sec-num">04</div>
+  <div class="sec-eye">04 — Typography</div>
+  <h2 class="sec-title"><span class="g">Type</span> System</h2>
+  <p class="sec-desc">Inter for all human-readable content. JetBrains Mono for code, hex values, version numbers, and metadata. Fluid sizing via <code>clamp()</code> for seamless scaling across all viewports — iPhone to 4K.</p>
+
+  <div class="g2" style="margin-bottom:56px">
+    <div class="card"><div class="card-label">Primary — UI & Content</div><div style="font-size:40px;font-weight:700;margin:16px 0 6px">Inter</div><div style="font-size:13px;color:var(--faint);font-family:var(--mono)">fonts.google.com/inter</div><div style="margin-top:14px;font-size:13px;color:var(--muted)">Weights: 300 · 400 · 500 · 600 · 700 · 800</div><div style="margin-top:14px;font-size:16px;color:var(--faint);line-height:1.8">ABCDEFGHIJKLM NOPQRSTUVWXYZ<br>abcdefghijklm nopqrstuvwxyz<br>0123456789 €$¥₽%&@</div></div>
+    <div class="card"><div class="card-label">Secondary — Code & Data</div><div style="font-size:34px;font-weight:700;margin:16px 0 6px;font-family:var(--mono)">JetBrains Mono</div><div style="font-size:13px;color:var(--faint);font-family:var(--mono)">fonts.google.com</div><div style="margin-top:14px;font-size:13px;color:var(--muted)">Weights: 400 · 500</div><div style="margin-top:14px;font-size:14px;color:var(--faint);font-family:var(--mono);line-height:1.9">#7c3aed → #0ea5e9<br>v1.0 · 2026-05-28<br>$2.50 / month</div></div>
+  </div>
+
+  <div class="card-label">Type Scale</div>
+  <div class="type-row"><div class="type-meta"><span class="type-tag">DISPLAY</span><span class="type-spec">72px / wt 800 / lh 1.0 / ls -0.02em</span></div><div class="t-display">Smart Money</div></div>
+  <div class="type-row"><div class="type-meta"><span class="type-tag">H1</span><span class="type-spec">clamp(40px,5vw,56px) / wt 700 / lh 1.05</span></div><div class="t-h1">Track every penny</div></div>
+  <div class="type-row"><div class="type-meta"><span class="type-tag">H2</span><span class="type-spec">clamp(28px,3vw,40px) / wt 700 / lh 1.1</span></div><div class="t-h2">Your money, clarified</div></div>
+  <div class="type-row"><div class="type-meta"><span class="type-tag">H3</span><span class="type-spec">32px / wt 600 / lh 1.15</span></div><div class="t-h3">5 AI agents at work</div></div>
+  <div class="type-row"><div class="type-meta"><span class="type-tag">H4</span><span class="type-spec">24px / wt 600 / lh 1.2</span></div><div class="t-h4">Auto-categorization in 300ms</div></div>
+  <div class="type-row"><div class="type-meta"><span class="type-tag">H5</span><span class="type-spec">20px / wt 600 / lh 1.3</span></div><div class="t-h5">19 categories · 60+ subcategories</div></div>
+  <div class="type-row"><div class="type-meta"><span class="type-tag">BODY LG</span><span class="type-spec">18px / wt 400 / lh 1.7</span></div><div class="t-body-lg">FinVision uses five specialized language models to process your receipts with precision. Each agent handles exactly one task — and does it exceptionally well.</div></div>
+  <div class="type-row"><div class="type-meta"><span class="type-tag">BODY</span><span class="type-spec">16px / wt 400 / lh 1.7</span></div><div class="t-body">Snap a photo of your receipt. Vision AI reads it, Category AI sorts it, Analytics AI tells you what it means. Zero typing required.</div></div>
+  <div class="type-row"><div class="type-meta"><span class="type-tag">BODY SM</span><span class="type-spec">14px / wt 400 / lh 1.6</span></div><div class="t-sm">6 languages · 30 currencies · auto-detected from Telegram settings</div></div>
+  <div class="type-row"><div class="type-meta"><span class="type-tag">CAPTION</span><span class="type-spec">12px / wt 500 / lh 1.5</span></div><div class="t-caption">Powered by Gemma 4 31B + Qwen 3.5 · Local inference · Cloud fallback</div></div>
+  <div class="type-row"><div class="type-meta"><span class="type-tag">MICRO</span><span class="type-spec">11px / wt 600 / lh 1.4 / ls 0.08em / uppercase</span></div><div class="t-micro">Section Label · Category Tag · Status Chip</div></div>
+
+  <div class="divider"></div>
+  <div class="card-label">Font Weights — Inter</div>
+  <div class="w-row"><span class="w-num">300</span><span class="w-sample" style="font-weight:300">Light — blockquotes only</span></div>
+  <div class="w-row"><span class="w-num">400</span><span class="w-sample" style="font-weight:400">Regular — body text, paragraphs, descriptions</span></div>
+  <div class="w-row"><span class="w-num">500</span><span class="w-sample" style="font-weight:500">Medium — UI labels, captions, small tags</span></div>
+  <div class="w-row"><span class="w-num">600</span><span class="w-sample" style="font-weight:600">Semibold — card headings, H4–H5, section titles</span></div>
+  <div class="w-row"><span class="w-num">700</span><span class="w-sample" style="font-weight:700">Bold — H1, H2, H3 primary headings</span></div>
+  <div class="w-row" style="border:none"><span class="w-num">800</span><span class="w-sample" style="font-weight:800">Extrabold — Display, logo wordmark, hero stat numbers</span></div>
+</section>
+
+<!-- 05 SPACING -->
+<section class="section" id="spacing">
+  <div class="sec-num">05</div>
+  <div class="sec-eye">05 — Spacing & Layout</div>
+  <h2 class="sec-title">Spacing & <span class="g">Layout</span></h2>
+  <p class="sec-desc">Base unit: 4px. All values are multiples of 4. Components use 8px steps. Section padding uses 40–120px steps. Fluid via <code>clamp()</code> on mobile.</p>
+
+  <div class="card-label">Spacing Scale</div>
+  <div style="margin-bottom:48px">
+    <div class="sp-row"><div class="sp-val">4px</div><div class="sp-bar" style="width:4px"></div><div class="sp-use">xs — icon gap, tight pairs</div></div>
+    <div class="sp-row"><div class="sp-val">8px</div><div class="sp-bar" style="width:8px"></div><div class="sp-use">sm — badge padding, button gap</div></div>
+    <div class="sp-row"><div class="sp-val">12px</div><div class="sp-bar" style="width:12px"></div><div class="sp-use">— button padding Y</div></div>
+    <div class="sp-row"><div class="sp-val">16px</div><div class="sp-bar" style="width:16px"></div><div class="sp-use">md — card gap, nav items, grid small</div></div>
+    <div class="sp-row"><div class="sp-val">24px</div><div class="sp-bar" style="width:24px"></div><div class="sp-use">— card padding, grid gap standard</div></div>
+    <div class="sp-row"><div class="sp-val">32px</div><div class="sp-bar" style="width:32px"></div><div class="sp-use">lg — section sub-gap</div></div>
+    <div class="sp-row"><div class="sp-val">48px</div><div class="sp-bar" style="width:48px"></div><div class="sp-use">xl — between section blocks</div></div>
+    <div class="sp-row"><div class="sp-val">64px</div><div class="sp-bar" style="width:64px"></div><div class="sp-use">2xl — between major content areas</div></div>
+    <div class="sp-row"><div class="sp-val">80px</div><div class="sp-bar" style="width:80px"></div><div class="sp-use">3xl — section horizontal padding (desktop)</div></div>
+    <div class="sp-row"><div class="sp-val">120px</div><div class="sp-bar" style="width:120px"></div><div class="sp-use">4xl — section vertical padding (desktop)</div></div>
+  </div>
+
+  <div class="card-label">Border Radius</div>
+  <div class="radius-wrap" style="margin-bottom:48px">
+    <div><div class="radius-box" style="border-radius:6px"></div><div class="radius-label">6px<br>sm · tags</div></div>
+    <div><div class="radius-box" style="border-radius:10px"></div><div class="radius-label">10px<br>md · buttons</div></div>
+    <div><div class="radius-box" style="border-radius:16px"></div><div class="radius-label">16px<br>lg · cards</div></div>
+    <div><div class="radius-box" style="border-radius:24px"></div><div class="radius-label">24px<br>xl · modals</div></div>
+    <div><div class="radius-box" style="border-radius:9999px;width:72px;height:36px"></div><div class="radius-label">9999px<br>full · pills</div></div>
+  </div>
+
+  <div class="card-label">Glow & Shadow System</div>
+  <div class="glow-demo">
+    <div class="glow-box">
+      <div class="glow-sq" style="background:var(--surface-hi);box-shadow:0 1px 2px rgba(0,0,0,.5),0 4px 16px rgba(0,0,0,.4)"></div>
+      <div class="glow-name">Depth Shadow</div>
+      <div class="glow-css">0 1px 2px rgba(0,0,0,.5)<br>0 4px 16px rgba(0,0,0,.4)<br>Cards on dark bg</div>
+    </div>
+    <div class="glow-box">
+      <div class="glow-sq" style="background:var(--grad);box-shadow:0 0 28px rgba(124,58,237,.5),0 0 56px rgba(124,58,237,.2)"></div>
+      <div class="glow-name">Violet Glow</div>
+      <div class="glow-css">0 0 28px rgba(124,58,237,.5)<br>0 0 56px rgba(124,58,237,.2)<br>CTA hover state</div>
+    </div>
+    <div class="glow-box">
+      <div class="glow-sq" style="background:linear-gradient(135deg,#4f46e5,#0ea5e9);box-shadow:0 0 28px rgba(14,165,233,.4),0 0 56px rgba(14,165,233,.15)"></div>
+      <div class="glow-name">Sky Glow</div>
+      <div class="glow-css">0 0 28px rgba(14,165,233,.4)<br>0 0 56px rgba(14,165,233,.15)<br>Highlighted pricing card</div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 COMPONENTS -->
+<section class="section" id="components">
+  <div class="sec-num">06</div>
+  <div class="sec-eye">06 — Components</div>
+  <h2 class="sec-title">UI <span class="g">Components</span></h2>
+  <p class="sec-desc">Pure CSS components — no JavaScript dependencies. Every variant defined with exact specs. These are the only building blocks used on the site.</p>
+
+  <div class="card-label">Buttons — 3 variants × 3 sizes</div>
+  <div class="comp-row"><span class="comp-label" style="display:block;width:100%;margin-bottom:0">Primary — gradient background, violet glow on hover</span></div>
+  <div class="comp-row" style="margin-top:-8px">
+    <button class="btn btn-primary lg">Start for free →</button>
+    <button class="btn btn-primary">Get started</button>
+    <button class="btn btn-primary sm">Learn more</button>
+  </div>
+  <div class="comp-row" style="margin-top:4px">
+    <div class="comp-label" style="margin-bottom:0;width:100%">Secondary — outlined, violet border on hover</div>
+  </div>
+  <div class="comp-row" style="margin-top:-8px">
+    <button class="btn btn-secondary lg">View features</button>
+    <button class="btn btn-secondary">See pricing</button>
+    <button class="btn btn-secondary sm">Docs</button>
+  </div>
+  <div class="comp-row" style="margin-top:4px">
+    <div class="comp-label" style="margin-bottom:0;width:100%">Ghost — text only, no background</div>
+  </div>
+  <div class="comp-row" style="margin-top:-8px">
+    <button class="btn btn-ghost">Features</button>
+    <button class="btn btn-ghost">Pricing</button>
+    <button class="btn btn-ghost">FAQ</button>
+    <button class="btn btn-ghost">Blog</button>
+  </div>
+
+  <div class="divider"></div>
+  <div class="card-label">Badges & Pills — 5 semantic variants</div>
+  <div class="comp-row">
+    <span class="badge b-violet">AI-Powered</span>
+    <span class="badge b-sky">New Feature</span>
+    <span class="badge b-green">Active</span>
+    <span class="badge b-amber">⭐ Premium</span>
+    <span class="badge b-neutral">v1.0</span>
+  </div>
+
+  <div class="divider"></div>
+  <div class="card-label">Cards — 2 variants</div>
+  <div class="g2" style="margin-bottom:0">
+    <div>
+      <div style="font-size:11px;font-family:var(--mono);color:var(--faint);margin-bottom:12px">Standard Card — glassmorphism, subtle border</div>
+      <div class="demo-card-glass">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+          <div style="width:38px;height:38px;background:rgba(124,58,237,.18);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:17px">🧠</div>
+          <div><div style="font-weight:600;font-size:15px">Auto-Categorization</div><div style="font-size:12px;color:var(--faint)">Category Agent · Qwen 3.5</div></div>
+        </div>
+        <div style="font-size:14px;color:var(--muted);line-height:1.6">19 categories, 60+ subcategories. Assigns the correct category in under 300ms with 95%+ accuracy.</div>
+      </div>
+    </div>
+    <div>
+      <div style="font-size:11px;font-family:var(--mono);color:var(--faint);margin-bottom:12px">Highlighted Card — 1px gradient border via ::before mask</div>
+      <div class="demo-card-glow">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+          <div style="width:38px;height:38px;background:var(--grad);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:17px">⭐</div>
+          <div><div style="font-weight:600;font-size:15px">Annual Plan</div><div style="font-size:12px;color:var(--faint)">Best value · Save 12%</div></div>
+        </div>
+        <div style="font-size:14px;color:var(--muted);line-height:1.6">$26.40 / year. All features, all languages, 30 currencies. Cancel anytime.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 07 MOTION -->
+<section class="section" id="motion">
+  <div class="sec-num">07</div>
+  <div class="sec-eye">07 — Motion</div>
+  <h2 class="sec-title">Motion & <span class="g">Animation</span></h2>
+  <p class="sec-desc">Motion communicates state — not just movement. Every animation has a purpose. Never decorative. On reduced-motion devices, all transitions collapse to instant.</p>
+
+  <div class="card-label">Duration Tokens</div>
+  <div class="dur-grid">
+    <div class="dur-card"><div class="dur-val">100ms</div><div class="dur-name">Instant</div><div class="dur-use">Hover colour shifts</div></div>
+    <div class="dur-card"><div class="dur-val">200ms</div><div class="dur-name">Micro</div><div class="dur-use">Buttons · links · icons</div></div>
+    <div class="dur-card"><div class="dur-val">400ms</div><div class="dur-name">Standard</div><div class="dur-use">Scroll reveals · cards</div></div>
+    <div class="dur-card"><div class="dur-val">600ms</div><div class="dur-name">Entrance</div><div class="dur-use">Hero · page load</div></div>
+  </div>
+
+  <div class="card-label">Easing Functions</div>
+  <div style="margin-bottom:48px">
+    <div class="ease-row">
+      <span class="ease-name">ease-out</span>
+      <svg class="ease-curve" width="60" height="40" viewBox="0 0 60 40"><path d="M5 35 C5 35 20 35 55 5" stroke="#7c3aed" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+      <code>cubic-bezier(0, 0, 0.3, 1)</code>
+      <span class="ease-note">Scroll reveals — natural deceleration</span>
+    </div>
+    <div class="ease-row">
+      <span class="ease-name">spring</span>
+      <svg class="ease-curve" width="60" height="40" viewBox="0 0 60 40"><path d="M5 35 C12 35 16 2 30 5 C42 7 46 8 55 5" stroke="#4f46e5" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+      <code>cubic-bezier(0.16, 1, 0.3, 1)</code>
+      <span class="ease-note">Entrance animations — energetic</span>
+    </div>
+    <div class="ease-row">
+      <span class="ease-name">ease-in-out</span>
+      <svg class="ease-curve" width="60" height="40" viewBox="0 0 60 40"><path d="M5 35 C15 35 45 5 55 5" stroke="#0ea5e9" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+      <code>cubic-bezier(0.4, 0, 0.2, 1)</code>
+      <span class="ease-note">State transitions — balanced</span>
+    </div>
+  </div>
+
+  <div class="card-label">Animation Principles</div>
+  <div class="g2">
+    <div class="card"><div style="font-size:15px;font-weight:600;margin-bottom:12px">↑ Scroll Reveal</div><div style="font-size:13px;font-family:var(--mono);color:var(--muted);line-height:2">opacity: 0 → 1<br>translateY: 24px → 0<br>duration: 400ms · ease-out<br>stagger: 60ms per child item<br>trigger: IntersectionObserver</div></div>
+    <div class="card"><div style="font-size:15px;font-weight:600;margin-bottom:12px">🔢 Counter Animation</div><div style="font-size:13px;font-family:var(--mono);color:var(--muted);line-height:2">start: 0 → end: target<br>duration: 1200ms · ease-out<br>trigger: IntersectionObserver<br>format: integer only<br>use: hero stats only</div></div>
+    <div class="card"><div style="font-size:15px;font-weight:600;margin-bottom:12px">➡ Marquee Ticker</div><div style="font-size:13px;font-family:var(--mono);color:var(--muted);line-height:2">animation: marquee<br>duration: 30s linear infinite<br>pause-on-hover: yes<br>duplicate: 2× for seamless loop<br>use: currencies section</div></div>
+    <div class="card"><div style="font-size:15px;font-weight:600;margin-bottom:12px">✨ Glow Pulse</div><div style="font-size:13px;font-family:var(--mono);color:var(--muted);line-height:2">box-shadow keyframe pulse<br>duration: 2000ms ease-in-out<br>iteration: infinite<br>amplitude: 50% → 100%<br>use: primary CTA button only</div></div>
+  </div>
+</section>
+
+<!-- 08 IMAGERY -->
+<section class="section" id="imagery">
+  <div class="sec-num">08</div>
+  <div class="sec-eye">08 — Imagery</div>
+  <h2 class="sec-title"><span class="g">Imagery</span> Style</h2>
+  <p class="sec-desc">No stock photos. No smiling people in front of laptops. Imagery is architectural — CSS shapes, inline SVG, phone mockups drawn in code, and abstract gradient backgrounds that feel precise and technical.</p>
+
+  <div class="g3" style="margin-bottom:48px">
+    <div>
+      <div style="font-size:11px;font-family:var(--mono);color:var(--faint);margin-bottom:12px">Phone Mockup (CSS-drawn)</div>
+      <div style="background:#1a1a1f;border-radius:18px;padding:14px;border:1px solid rgba(255,255,255,.1)">
+        <div style="background:#09090b;border-radius:10px;padding:18px;font-family:var(--mono);font-size:11px;color:var(--muted)">
+          <div style="color:#4ade80;margin-bottom:8px">✓ Receipt processed</div>
+          <div style="margin-bottom:3px">Store: <span style="color:var(--text)">Магнит</span></div>
+          <div style="margin-bottom:3px">Amount: <span style="color:var(--text)">₽1,247</span></div>
+          <div style="margin-bottom:3px">Category: <span style="color:#a78bfa">Groceries</span></div>
+          <div style="margin-bottom:3px">Date: <span style="color:var(--text)">2026-05-28</span></div>
+          <div style="margin-top:12px;display:flex;gap:8px">
+            <span style="background:rgba(124,58,237,.2);color:#a78bfa;padding:3px 8px;border-radius:5px;font-size:10px">✓ Save</span>
+            <span style="background:rgba(255,255,255,.05);color:var(--muted);padding:3px 8px;border-radius:5px;font-size:10px">Edit</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div style="font-size:11px;font-family:var(--mono);color:var(--faint);margin-bottom:12px">Abstract Gradient (CSS-only)</div>
+      <div style="height:198px;border-radius:18px;position:relative;overflow:hidden;background:#111113">
+        <div style="position:absolute;top:-40%;left:-30%;width:90%;height:90%;background:radial-gradient(circle,rgba(124,58,237,.35) 0%,transparent 60%)"></div>
+        <div style="position:absolute;bottom:-30%;right:-10%;width:70%;height:70%;background:radial-gradient(circle,rgba(14,165,233,.25) 0%,transparent 60%)"></div>
+        <div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1px);background-size:24px 24px"></div>
+      </div>
+    </div>
+    <div>
+      <div style="font-size:11px;font-family:var(--mono);color:var(--faint);margin-bottom:12px">Icon Style — Lucide (stroke, 1.5px)</div>
+      <div class="icon-grid">
+        <div class="icon-cell"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="1.5" stroke-linecap="round"><path d="M23 7L13.5 16.5L8.5 11.5L1 19M23 7H17M23 7V13"/></svg><span class="icon-name">trend-up</span></div>
+        <div class="icon-cell"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg><span class="icon-name">clock</span></div>
+        <div class="icon-cell"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="1.5" stroke-linecap="round"><path d="M20 6L9 17L4 12"/></svg><span class="icon-name">check</span></div>
+        <div class="icon-cell"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9H21M9 21V9"/></svg><span class="icon-name">table</span></div>
+        <div class="icon-cell"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M2 12H22M12 2C9.3 5.3 8 8.7 8 12s1.3 6.7 4 10c2.7-3.3 4-6.7 4-10S14.7 5.3 12 2z"/></svg><span class="icon-name">globe</span></div>
+        <div class="icon-cell"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span class="icon-name">lock</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="g3">
+    <div class="card"><div style="font-weight:600;margin-bottom:12px;color:#4ade80">✓ Use</div><ul style="font-size:14px;color:var(--muted);line-height:2;padding-left:18px"><li>Dark minimal environments</li><li>Close-up tech / devices</li><li>Abstract, desaturated</li><li>Top-down flat lay shots</li><li>Motion blur · bokeh</li></ul></div>
+    <div class="card"><div style="font-weight:600;margin-bottom:12px;color:#f87171">✗ Avoid</div><ul style="font-size:14px;color:var(--muted);line-height:2;padding-left:18px"><li>Stock smiling people</li><li>Bright saturated photos</li><li>Office clichés</li><li>Clipart illustrations</li><li>Low-poly 3D renders</li></ul></div>
+    <div class="card"><div style="font-weight:600;margin-bottom:12px;color:var(--muted)">Post-processing</div><ul style="font-size:14px;color:var(--muted);line-height:2;padding-left:18px"><li>Slight desaturation (–15%)</li><li>Cool colour grading</li><li>Dark vignette edges</li><li>Subtle blue/purple tint</li></ul></div>
+  </div>
+</section>
+
+<!-- 09 VOICE & TONE -->
+<section class="section" id="voice">
+  <div class="sec-num">09</div>
+  <div class="sec-eye">09 — Voice & Tone</div>
+  <h2 class="sec-title">Voice & <span class="g">Tone</span></h2>
+  <p class="sec-desc">We speak like a sharp, trusted friend — not a bank, not a startup pitch deck. Short sentences. Active voice. We trust the reader's intelligence and never over-explain.</p>
+
+  <div class="g2" style="margin-bottom:48px">
+    <div>
+      <div class="card-label">Russian (RU)</div>
+      <div class="voice-ex voice-good"><div class="voice-tag vt-g">✓ Хорошо</div><div class="voice-text">"Сфотографируйте чек. FinVision сделает всё остальное."</div></div>
+      <div class="voice-ex voice-bad"><div class="voice-tag vt-b">✗ Плохо</div><div class="voice-text">"Наш инновационный AI-сервис предоставляет комплексные решения для учёта личных финансов!"</div></div>
+      <div class="voice-ex voice-good"><div class="voice-tag vt-g">✓ Хорошо</div><div class="voice-text">"Вы потратили на кофе на 34% больше, чем в апреле."</div></div>
+      <div class="voice-ex voice-bad"><div class="voice-tag vt-b">✗ Плохо</div><div class="voice-text">"Внимание! Обнаружено превышение расходов по категории Кофе/напитки!"</div></div>
+      <div class="voice-ex voice-good" style="margin-bottom:0"><div class="voice-tag vt-g">✓ Хорошо</div><div class="voice-text">"60 дней бесплатно. Потом $2.50 в месяц. Отмена в любой момент."</div></div>
+    </div>
+    <div>
+      <div class="card-label">English (EN)</div>
+      <div class="voice-ex voice-good"><div class="voice-tag vt-g">✓ Good</div><div class="voice-text">"Snap a photo. We handle the rest."</div></div>
+      <div class="voice-ex voice-bad"><div class="voice-tag vt-b">✗ Bad</div><div class="voice-text">"FinVision AI leverages cutting-edge artificial intelligence to revolutionize personal finance management!"</div></div>
+      <div class="voice-ex voice-good"><div class="voice-tag vt-g">✓ Good</div><div class="voice-text">"You spent 34% more on coffee than last month."</div></div>
+      <div class="voice-ex voice-bad"><div class="voice-tag vt-b">✗ Bad</div><div class="voice-text">"ALERT: Your Coffee/Beverages category has exceeded historical averages!"</div></div>
+      <div class="voice-ex voice-good" style="margin-bottom:0"><div class="voice-tag vt-g">✓ Good</div><div class="voice-text">"60 days free. Then $2.50/month. Cancel anytime."</div></div>
+    </div>
+  </div>
+
+  <div class="card-label">Word Choices</div>
+  <div class="g2">
+    <div class="card"><div style="font-size:12px;font-weight:700;color:#4ade80;margin-bottom:14px">SAY THIS</div><div style="display:flex;flex-direction:column;gap:8px"><span style="font-size:14px;padding:8px 12px;background:rgba(34,197,94,.05);border-radius:8px">Track → <strong>See</strong></span><span style="font-size:14px;padding:8px 12px;background:rgba(34,197,94,.05);border-radius:8px">Innovative → <strong>Smart</strong></span><span style="font-size:14px;padding:8px 12px;background:rgba(34,197,94,.05);border-radius:8px">Utilize → <strong>Use</strong></span><span style="font-size:14px;padding:8px 12px;background:rgba(34,197,94,.05);border-radius:8px">Financial management → <strong>Your money</strong></span></div></div>
+    <div class="card"><div style="font-size:12px;font-weight:700;color:#f87171;margin-bottom:14px">NOT THIS</div><div style="display:flex;flex-direction:column;gap:8px"><span style="font-size:14px;padding:8px 12px;background:rgba(239,68,68,.05);border-radius:8px;color:var(--muted)">Leverage, synergize, empower</span><span style="font-size:14px;padding:8px 12px;background:rgba(239,68,68,.05);border-radius:8px;color:var(--muted)">Revolutionary, game-changing</span><span style="font-size:14px;padding:8px 12px;background:rgba(239,68,68,.05);border-radius:8px;color:var(--muted)">Industry-leading, best-in-class</span><span style="font-size:14px;padding:8px 12px;background:rgba(239,68,68,.05);border-radius:8px;color:var(--muted)">Paradigm shift, next-gen platform</span></div></div>
+  </div>
+</section>
+
+<!-- 10 DON'TS -->
+<section class="section" id="donts" style="border-bottom:none">
+  <div class="sec-num">10</div>
+  <div class="sec-eye">10 — Don'ts</div>
+  <h2 class="sec-title">Common <span class="g">Mistakes</span></h2>
+  <p class="sec-desc">Rules matter most when paired with their violations. The following breaks the system and will make the brand feel inconsistent or amateurish.</p>
+
+  <div class="donts-grid" style="margin-bottom:64px">
+    <div class="dont-card dont-bad"><div class="dont-label dl-bad">✗ Wrong gradient direction</div><div style="padding:20px;border-radius:10px;background:linear-gradient(to right,#ef4444,#7c3aed);text-align:center;font-weight:700;margin-bottom:12px">FinVision</div><div style="font-size:13px;color:var(--muted)">Never change the gradient direction. Always 135deg only.</div></div>
+    <div class="dont-card dont-good"><div class="dont-label dl-good">✓ Correct gradient</div><div style="padding:20px;border-radius:10px;background:linear-gradient(135deg,#7c3aed,#4f46e5,#0ea5e9);text-align:center;font-weight:700;margin-bottom:12px">FinVision</div><div style="font-size:13px;color:var(--muted)">Primary gradient: 135deg · violet → indigo → sky.</div></div>
+
+    <div class="dont-card dont-bad"><div class="dont-label dl-bad">✗ Gradient text everywhere</div><div style="padding:16px;font-size:14px;line-height:1.7;margin-bottom:12px"><span style="background:var(--grad-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Snap a photo.</span> <span style="background:var(--grad-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">AI reads it.</span> <span style="background:var(--grad-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">You see results.</span></div><div style="font-size:13px;color:var(--muted)">Gradient text loses impact when overused. Max 1–2 words per heading.</div></div>
+    <div class="dont-card dont-good"><div class="dont-label dl-good">✓ One gradient word</div><div style="padding:16px;font-size:14px;line-height:1.7;margin-bottom:12px">Your money. <span style="background:var(--grad-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Clarified.</span></div><div style="font-size:13px;color:var(--muted)">White text carries the sentence. Gradient marks the key word only.</div></div>
+
+    <div class="dont-card dont-bad"><div class="dont-label dl-bad">✗ Light background</div><div style="padding:20px;border-radius:10px;background:#ffffff;color:#000;text-align:center;font-size:13px;margin-bottom:12px">FinVision on white</div><div style="font-size:13px;color:var(--muted)">FinVision is a dark-first brand. Light themes break visual identity entirely.</div></div>
+    <div class="dont-card dont-good"><div class="dont-label dl-good">✓ Dark background only</div><div style="padding:20px;border-radius:10px;background:#09090b;border:1px solid rgba(255,255,255,.07);color:#fafafa;text-align:center;font-size:13px;margin-bottom:12px">FinVision on #09090b</div><div style="font-size:13px;color:var(--muted)">Always #09090b base. Only exception: doc-mode or legal print.</div></div>
+
+    <div class="dont-card dont-bad"><div class="dont-label dl-bad">✗ Full-opacity brand colors as text</div><div style="padding:16px;font-size:22px;font-weight:700;color:#7c3aed;margin-bottom:12px">This heading</div><div style="font-size:13px;color:var(--muted)">Solid violet on dark backgrounds lacks contrast. Use gradient text or white.</div></div>
+    <div class="dont-card dont-good"><div class="dont-label dl-good">✓ Gradient or white text</div><div style="padding:16px;font-size:22px;font-weight:700;background:var(--grad-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:12px">This heading</div><div style="font-size:13px;color:var(--muted)">Gradient text on dark: readable, beautiful, on-brand.</div></div>
+  </div>
+
+  <!-- Brand book footer -->
+  <div style="padding-top:48px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center">
+    <div>
+      <div style="font-size:20px;font-weight:800">Fin<span style="font-weight:400;background:var(--grad-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Vision AI</span></div>
+      <div style="font-size:12px;color:var(--faint);margin-top:4px;font-family:var(--mono)">Brand Guidelines v1.0 · 2026-05-28</div>
+    </div>
+    <div style="text-align:right">
+      <div style="font-size:12px;color:var(--faint);line-height:1.7">Internal document · Do not distribute<br>Questions → product team</div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<script>
+// Scroll progress
+const prog = document.getElementById('progress');
+window.addEventListener('scroll', () => {
+  const t = document.documentElement.scrollHeight - window.innerHeight;
+  prog.style.transform = `scaleX(${window.scrollY / t})`;
+}, {passive:true});
+
+// Active nav highlight
+const secs = document.querySelectorAll('section[id]');
+const links = document.querySelectorAll('.sb-link[href]');
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const id = e.target.id;
+      links.forEach(l => {
+        l.classList.toggle('active', l.getAttribute('href') === '#' + id);
+      });
+    }
+  });
+}, {threshold: 0.25});
+secs.forEach(s => io.observe(s));
+</script>
+</body>
+</html>

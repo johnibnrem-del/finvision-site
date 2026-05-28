@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="FinVision AI — умный учёт расходов в Telegram. Сфотографируйте чек, AI сделает остальное. 60 дней бесплатно.">
+  <title>FinVision AI — Умный учёт расходов в Telegram</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ═══════ NAVBAR ════════════════════════════════════════════ -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">Fin<span>Vision</span></a>
+    <div class="nav-links">
+      <a href="#features" data-i18n="nav.features">Возможности</a>
+      <a href="#pricing"  data-i18n="nav.pricing">Цены</a>
+      <a href="#faq"      data-i18n="nav.faq">FAQ</a>
+    </div>
+    <div class="nav-actions">
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="ru">RU</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+      <a href="https://t.me/FinVision_AI_bot" target="_blank" rel="noopener"
+         class="btn btn-primary nav-cta" data-i18n="nav.cta">Попробовать бесплатно</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#features" data-i18n="nav.features">Возможности</a>
+    <a href="#pricing"  data-i18n="nav.pricing">Цены</a>
+    <a href="#faq"      data-i18n="nav.faq">FAQ</a>
+    <a href="https://t.me/FinVision_AI_bot" target="_blank" rel="noopener"
+       class="btn btn-primary mobile-cta" data-i18n="nav.cta">Попробовать бесплатно</a>
+  </div>
+</nav>
+
+<main>
+
+<!-- ═══════ HERO ═════════════════════════════════════════════ -->
+<section class="hero" id="hero">
+  <div class="hero-glow hero-glow-1"></div>
+  <div class="hero-glow hero-glow-2"></div>
+  <div class="hero-aurora aurora-1"></div>
+  <div class="hero-aurora aurora-2"></div>
+  <div class="hero-aurora aurora-3"></div>
+
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text">
+
+        <div class="hero-badge" data-animate>
+          <span class="badge-dot"></span>
+          <span data-i18n="hero.badge">60 дней бесплатно</span>
+          <span style="color:var(--faint);margin-left:4px">·</span>
+          <span style="color:var(--faint);font-size:12px">без карты</span>
+        </div>
+
+        <h1 class="hero-title" data-animate data-delay="80">
+          <span data-i18n="hero.title_1">Ваши деньги</span><br>
+          <span class="animated-gradient" data-i18n="hero.title_2">перестали исчезать</span>
+        </h1>
+
+        <p class="hero-sub" data-animate data-delay="140" data-i18n="hero.subtitle">
+          Сфотографируйте чек — FinVision сделает всё остальное.
+        </p>
+
+        <div class="hero-actions" data-animate data-delay="200">
+          <a href="https://t.me/FinVision_AI_bot" target="_blank" rel="noopener"
+             class="btn btn-primary btn-primary-lg" data-i18n="hero.cta">Начать бесплатно →</a>
+          <span class="hero-note" data-i18n="hero.note">Уже в Telegram · Без установки</span>
+        </div>
+
+        <div class="hero-stats" data-animate data-delay="260" data-stagger>
+          <div class="stat">
+            <div class="stat-val" data-count="5">5</div>
+            <div class="stat-label" data-i18n="stats.agents">AI агентов</div>
+          </div>
+          <div class="stat">
+            <div class="stat-val" data-count="19">19</div>
+            <div class="stat-label" data-i18n="stats.categories">категорий</div>
+          </div>
+          <div class="stat">
+            <div class="stat-val" data-count="30">30</div>
+            <div class="stat-label" data-i18n="stats.currencies">валют</div>
+          </div>
+          <div class="stat">
+            <div class="stat-val" data-count="60">60</div>
+            <div class="stat-label" data-i18n="stats.free">дней бесплатно</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Phone visual + floating badges -->
+      <div class="hero-visual" style="position:relative">
+
+        <!-- Floating notification badges -->
+        <div class="hero-badge-float float float-d1"
+             style="top:-20px;right:10px;z-index:10">
+          <span class="hbf-dot hbf-green"></span>
+          <span>✓ Чек сохранён — ₽1,247</span>
+        </div>
+        <div class="hero-badge-float float float-d2"
+             style="bottom:40px;left:-30px;z-index:10">
+          <span class="hbf-dot hbf-violet"></span>
+          <span>📊 Кафе +34% vs апрель</span>
+        </div>
+        <div class="hero-badge-float float-sm float-d3"
+             style="top:38%;right:-20px;z-index:10">
+          <span class="hbf-dot hbf-sky"></span>
+          <span>🧠 Gemma 4 · 3.2с</span>
+        </div>
+
+        <!-- Phone mockup -->
+        <div class="phone-mockup">
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="chat-header">
+                <div class="chat-avatar">FV</div>
+                <div>
+                  <div class="chat-name">FinVision AI</div>
+                  <div class="chat-status">● online</div>
+                </div>
+              </div>
+              <div class="chat-body">
+                <div class="msg-user">
+                  <div class="msg-photo-pill">📸 receipt_may28.jpg</div>
+                </div>
+                <div class="msg-bot">
+                  <div class="receipt-card">
+                    <div class="rc-top">
+                      <span class="rc-check">✓</span>
+                      <span class="rc-title">Чек распознан</span>
+                    </div>
+                    <div class="rc-row"><span class="rc-k">Магазин</span><span class="rc-v">Магнит</span></div>
+                    <div class="rc-row"><span class="rc-k">Сумма</span><span class="rc-v">₽1,247</span></div>
+                    <div class="rc-row"><span class="rc-k">Категория</span><span class="rc-v rc-cat">🛒 Продукты</span></div>
+                    <div class="rc-row"><span class="rc-k">Дата</span><span class="rc-v">28 мая</span></div>
+                    <div class="rc-actions">
+                      <button class="rc-btn rc-save">✓ Сохранить</button>
+                      <button class="rc-btn rc-edit">Изменить</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="msg-bot" style="margin-top:8px">
+                  <div class="receipt-card" style="background:rgba(124,58,237,0.08)">
+                    <div class="rc-top" style="margin-bottom:10px">
+                      <span style="color:#a78bfa">📊</span>
+                      <span class="rc-title">Отчёт за май</span>
+                    </div>
+                    <div class="rc-row"><span class="rc-k">Всего</span><span class="rc-v">₽45,230</span></div>
+                    <div class="rc-row"><span class="rc-k">Продукты</span><span class="rc-v">34%</span></div>
+                    <div class="rc-row" style="margin-top:6px;padding-top:6px;border-top:1px solid rgba(255,255,255,.07)">
+                      <span style="font-size:11px;color:#f87171">↑ Кафе +34% vs апрель</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ PROOF BAR ════════════════════════════════════════ -->
+<div class="proof-bar">
+  <div class="container">
+    <div class="proof-inner">
+      <div class="proof-item">
+        <span class="proof-num">900M+</span>
+        <span class="proof-label" data-i18n="proof.telegram">пользователей Telegram</span>
+      </div>
+      <div class="proof-item">
+        <span class="proof-num">5</span>
+        <span class="proof-label" data-i18n="proof.agents">специализированных AI-агентов</span>
+      </div>
+      <div class="proof-item">
+        <span class="proof-num">&lt;3с</span>
+        <span class="proof-label" data-i18n="proof.speed">среднее время ответа</span>
+      </div>
+      <div class="proof-item">
+        <span class="proof-num">95%</span>
+        <span class="proof-label" data-i18n="proof.accuracy">точность распознавания</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ PAIN ══════════════════════════════════════════════ -->
+<section class="pain section" id="pain">
+  <div class="container">
+    <div class="pain-header">
+      <span class="section-label" data-i18n="pain.label">Вы не одни</span>
+      <h2 class="section-title" data-animate>
+        <span data-i18n="pain.title">Деньги уходят,</span><br>
+        <span class="gradient-text" data-i18n="pain.title_accent">но куда?</span>
+      </h2>
+      <p class="section-subtitle" data-animate data-delay="60" data-i18n="pain.subtitle">
+        Большинство людей бросают учёт финансов через неделю. Не потому что ленятся — а потому что это слишком сложно.
+      </p>
+    </div>
+
+    <!-- Flip cards — кликни чтобы увидеть решение -->
+    <p style="font-size:12px;color:var(--faint);text-align:center;margin-bottom:20px;letter-spacing:0.05em" data-i18n="pain.flip_hint">↻ Нажмите на карточку, чтобы увидеть решение</p>
+
+    <div class="pain-cards">
+      <div class="pain-card flip-card" data-animate role="button" aria-label="Flip card">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <div class="pain-card-icon">💸</div>
+            <div class="pain-card-title" data-i18n="pain.c1_title">Деньги тают... но куда?</div>
+            <div class="pain-card-text" data-i18n="pain.c1_text">К концу месяца на счету пусто, а вы не понимаете на что ушло. Цифры просто исчезают.</div>
+            <div class="flip-hint">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 4v6h6M23 20v-6h-6M20.49 9A9 9 0 0 0 5.64 5.64L1 10M23 14l-4.64 4.36A9 9 0 0 1 3.51 15"/></svg>
+              <span data-i18n="pain.see_solution">Нажмите → решение</span>
+            </div>
+          </div>
+          <div class="flip-back">
+            <div class="flip-back-icon">✅</div>
+            <div class="flip-back-title" data-i18n="pain.solution_label">Решение FinVision</div>
+            <div class="flip-back-text" data-i18n="pain.c1_fix">FinVision автоматически записывает каждый расход по фото чека. Отчёт за месяц — в одном сообщении. Никакого ручного ввода — никогда.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pain-card flip-card" data-animate data-delay="60" role="button">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <div class="pain-card-icon">📝</div>
+            <div class="pain-card-title" data-i18n="pain.c2_title">Вводить вручную — лень</div>
+            <div class="pain-card-text" data-i18n="pain.c2_text">Открыли приложение, увидели форму ввода, закрыли. Это знакомо 80% людей, которые «ведут учёт».</div>
+            <div class="flip-hint">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 4v6h6M23 20v-6h-6M20.49 9A9 9 0 0 0 5.64 5.64L1 10M23 14l-4.64 4.36A9 9 0 0 1 3.51 15"/></svg>
+              <span data-i18n="pain.see_solution">Нажмите → решение</span>
+            </div>
+          </div>
+          <div class="flip-back">
+            <div class="flip-back-icon">📸</div>
+            <div class="flip-back-title" data-i18n="pain.solution_label">Решение FinVision</div>
+            <div class="flip-back-text" data-i18n="pain.c2_fix">Одна фотография вместо формы с десятью полями. Весь процесс — 3 секунды. Бот всё остальное делает сам.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pain-card flip-card" data-animate data-delay="120" role="button">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <div class="pain-card-icon">🗂️</div>
+            <div class="pain-card-title" data-i18n="pain.c3_title">5 приложений. Все заброшены.</div>
+            <div class="pain-card-text" data-i18n="pain.c3_text">CoinKeeper, Excel, заметки в телефоне. Ни одно не прижилось дольше трёх дней.</div>
+            <div class="flip-hint">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 4v6h6M23 20v-6h-6M20.49 9A9 9 0 0 0 5.64 5.64L1 10M23 14l-4.64 4.36A9 9 0 0 1 3.51 15"/></svg>
+              <span data-i18n="pain.see_solution">Нажмите → решение</span>
+            </div>
+          </div>
+          <div class="flip-back">
+            <div class="flip-back-icon">💬</div>
+            <div class="flip-back-title" data-i18n="pain.solution_label">Решение FinVision</div>
+            <div class="flip-back-text" data-i18n="pain.c3_fix">FinVision работает в Telegram — там, где вы уже есть. Никакого нового приложения. Просто чат с ботом.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pain-solution" data-animate>
+      💡 <strong data-i18n="pain.solution">FinVision убирает главное препятствие — ручной ввод данных.</strong>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ HOW IT WORKS ══════════════════════════════════════ -->
+<section class="how section" id="how">
+  <div class="container">
+    <div class="how-header">
+      <span class="section-label" data-i18n="how.label">Как это работает</span>
+      <h2 class="section-title" data-animate>
+        <span data-i18n="how.title">Три шага</span><br>
+        <span class="gradient-text" data-i18n="how.title_accent">до ясности</span>
+      </h2>
+    </div>
+
+    <div class="steps">
+      <div class="step" data-animate>
+        <div class="step-num" data-i18n="how.s1_num">01</div>
+        <div class="step-body">
+          <div class="step-title" data-i18n="how.s1_title">Сфотографируйте чек</div>
+          <div class="step-text" data-i18n="how.s1_text">Любой чек, квитанция, ценник. Просто отправьте фото в Telegram-бот. Или напишите текстом: «потратил 500₽ на такси».</div>
+          <div class="how-meta">
+            <span data-i18n="how.s1_formats">JPG · PNG · WEBP</span>
+            <span data-i18n="how.s1_size">до 20 МБ</span>
+          </div>
+        </div>
+      </div>
+      <div class="step" data-animate data-delay="80">
+        <div class="step-num" data-i18n="how.s2_num">02</div>
+        <div class="step-body">
+          <div class="step-title" data-i18n="how.s2_title">AI читает и категоризирует</div>
+          <div class="step-text" data-i18n="how.s2_text">Gemma 4 31B распознаёт все данные чека. Qwen 3.5 определяет категорию из 19 вариантов. Всё это — менее чем за 5 секунд.</div>
+          <div class="how-meta">
+            <span data-i18n="how.s2_model">Gemma 4 + Qwen 3.5</span>
+            <span data-i18n="how.s2_time">&lt;5 секунд</span>
+          </div>
+        </div>
+      </div>
+      <div class="step" data-animate data-delay="160">
+        <div class="step-num" data-i18n="how.s3_num">03</div>
+        <div class="step-body">
+          <div class="step-title" data-i18n="how.s3_title">Смотрите отчёт</div>
+          <div class="step-text" data-i18n="how.s3_text">Тренды, аномалии, сравнение месяцев и персональные советы по экономии — всё в следующем сообщении бота.</div>
+          <div class="how-meta">
+            <span data-i18n="how.s3_daily">ежедневно</span>
+            <span data-i18n="how.s3_weekly">еженедельно</span>
+            <span data-i18n="how.s3_monthly">ежемесячно</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="how-note" data-animate>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      <span data-i18n="how.note">Работает также с текстом: «потратил 500₽ на такси»</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ FEATURES ══════════════════════════════════════════ -->
+<section class="features section" id="features">
+  <div class="container">
+    <div class="features-header">
+      <span class="section-label" data-i18n="features.label">Возможности</span>
+      <h2 class="section-title" data-animate>
+        <span data-i18n="features.title">Всё что нужно,</span><br>
+        <span class="gradient-text" data-i18n="features.title_accent">и ничего лишнего</span>
+      </h2>
+      <p class="section-subtitle" data-animate data-delay="60">
+        <span data-i18n="features.subtitle">Нажмите на карточку — узнайте больше о каждой функции</span>
+      </p>
+    </div>
+
+    <div class="bento">
+
+      <!-- F1 — Vision AI (wide, featured) -->
+      <div class="bento-card featured expandable tilt" data-animate>
+        <div class="bento-card-wide">
+          <div class="bento-body">
+            <div class="bento-icon bento-icon-violet">📸</div>
+            <div class="bento-title" data-i18n="features.f1_title">Vision AI</div>
+            <div class="bento-text" data-i18n="features.f1_text">Фото чека → структурированные данные за секунды.</div>
+            <div class="bento-text-sm" data-i18n="features.f1_sub">Магазин · товары · сумма · валюта · дата — без ручного ввода</div>
+          </div>
+          <div class="bento-illus">
+            <div class="illus-receipt">
+              <div class="receipt-body">
+                <div class="rline accent" style="width:55%;height:5px"></div>
+                <div class="rline" style="margin-top:6px"></div>
+                <div class="rline short"></div>
+                <div class="rline"></div>
+                <div class="rline short"></div>
+                <div class="rline total" style="margin-top:6px"></div>
+              </div>
+              <div class="receipt-tear"></div>
+              <div class="receipt-scan"></div>
+            </div>
+          </div>
+        </div>
+        <div class="expand-body">
+          <div class="expand-detail" data-i18n="features.f1_more">Vision Agent на базе Gemma 4 31B распознаёт текст, числа и структуру с точностью 85–95%. Поддерживает чеки на 6 языках, размытые фото и низкую освещённость. Если уверенность низкая — бот уточнит у вас.</div>
+        </div>
+        <div class="expand-trigger">
+          <span data-i18n="features.expand_more">Подробнее</span>
+          <div class="expand-icon">+</div>
+        </div>
+      </div>
+
+      <!-- F2 — Categories -->
+      <div class="bento-card expandable tilt" data-animate data-delay="60">
+        <div class="bento-icon bento-icon-sky">🧠</div>
+        <div class="bento-title" data-i18n="features.f2_title">Авто-категоризация</div>
+        <div class="bento-text" data-i18n="features.f2_text">19 категорий, 60+ подкатегорий. AI сам определяет куда записать расход.</div>
+        <div class="illus-cats" style="margin-top:12px">
+          <span class="cat-chip">🛒 Продукты</span>
+          <span class="cat-chip">🚗 Транспорт</span>
+          <span class="cat-chip">🏠 Жильё</span>
+          <span class="cat-chip">☕ Кафе</span>
+          <span class="cat-chip">💊 Здоровье</span>
+        </div>
+        <div class="expand-body">
+          <div class="expand-detail" data-i18n="features.f2_more">CategoryAgent сопоставляет расход с деревом из 19 корневых и 60+ дочерних категорий. Если уверенность ниже 70% — бот предложит 3 варианта. Вы всегда можете изменить категорию одним нажатием.</div>
+        </div>
+        <div class="expand-trigger">
+          <span data-i18n="features.expand_more">Подробнее</span>
+          <div class="expand-icon">+</div>
+        </div>
+      </div>
+
+      <!-- F3 — Analytics -->
+      <div class="bento-card expandable tilt" data-animate data-delay="100">
+        <div class="bento-icon bento-icon-violet">📊</div>
+        <div class="bento-title" data-i18n="features.f3_title">Умная аналитика</div>
+        <div class="bento-text" data-i18n="features.f3_text">Тренды, аномалии, прогнозы и персональные советы.</div>
+        <div class="illus-chart" style="margin-top:14px">
+          <div class="cbar" style="--h:50%"></div>
+          <div class="cbar" style="--h:70%"></div>
+          <div class="cbar" style="--h:45%"></div>
+          <div class="cbar hi" style="--h:92%"></div>
+          <div class="cbar" style="--h:65%"></div>
+        </div>
+        <div class="expand-body">
+          <div class="expand-detail" data-i18n="features.f3_more">AnalyticsAgent сравнивает периоды, находит аномалии и даёт конкретные советы: «Если сократить такси на 20%, сэкономите X₽ в месяц». Прогноз на конец месяца на основе текущего темпа трат.</div>
+        </div>
+        <div class="expand-trigger">
+          <span data-i18n="features.expand_more">Подробнее</span>
+          <div class="expand-icon">+</div>
+        </div>
+      </div>
+
+      <!-- F4 — Privacy -->
+      <div class="bento-card expandable tilt" data-animate data-delay="60">
+        <div class="bento-icon bento-icon-green">🔒</div>
+        <div class="bento-title" data-i18n="features.f4_title">Приватность</div>
+        <div class="bento-text" data-i18n="features.f4_text">AI работает локально. Ваши данные не уходят в облако Google или OpenAI.</div>
+        <div class="illus-server" style="margin-top:14px">
+          <div class="srv-unit"><div class="srv-led on"></div><div class="srv-line"></div><div class="srv-line"></div></div>
+          <div class="srv-unit"><div class="srv-led"></div><div class="srv-line"></div><div class="srv-line"></div></div>
+          <div class="srv-lock">🔒</div>
+        </div>
+        <div class="expand-body">
+          <div class="expand-detail" data-i18n="features.f4_more">Gemma 4 и Qwen 3.5 развёрнуты локально через LM Studio и Ollama. Никаких API-запросов в OpenAI или Google по умолчанию. Облачный fallback — только если ваш локальный сервер недоступен.</div>
+        </div>
+        <div class="expand-trigger">
+          <span data-i18n="features.expand_more">Подробнее</span>
+          <div class="expand-icon">+</div>
+        </div>
+      </div>
+
+      <!-- F5 — Languages -->
+      <div class="bento-card expandable tilt" data-animate data-delay="100">
+        <div class="bento-icon bento-icon-sky">🌍</div>
+        <div class="bento-title" data-i18n="features.f5_title">6 языков · 30 валют</div>
+        <div class="bento-text" data-i18n="features.f5_text">Язык определяется автоматически из настроек Telegram.</div>
+        <div class="illus-globe" style="margin-top:12px">
+          <div class="lang-flag" title="Русский">🇷🇺</div>
+          <div class="lang-flag" title="English">🇬🇧</div>
+          <div class="lang-flag" title="中文">🇨🇳</div>
+          <div class="lang-flag" title="Кыргызча">🇰🇬</div>
+          <div class="lang-flag" title="Français">🇫🇷</div>
+          <div class="lang-flag" title="Português">🇧🇷</div>
+        </div>
+        <div class="expand-body">
+          <div class="expand-detail" data-i18n="features.f5_more">Все сообщения бота, категории, отчёты и кнопки — на языке пользователя. Настройка не нужна: берём язык из вашего Telegram. 30 валют с региональной сортировкой.</div>
+        </div>
+        <div class="expand-trigger">
+          <span data-i18n="features.expand_more">Подробнее</span>
+          <div class="expand-icon">+</div>
+        </div>
+      </div>
+
+      <!-- F6 — Duplicate protection (wide) -->
+      <div class="bento-card featured expandable tilt" data-animate data-delay="140">
+        <div class="bento-card-wide">
+          <div class="bento-body">
+            <div class="bento-icon bento-icon-amber">🛡️</div>
+            <div class="bento-title" data-i18n="features.f6_title">Защита от дублей</div>
+            <div class="bento-text" data-i18n="features.f6_text">Уже сохранили этот чек? Бот распознает и не создаст повтор.</div>
+            <div class="bento-text-sm" data-i18n="features.f6_sub">Алгоритм perceptual hash + расстояние Хэмминга</div>
+          </div>
+          <div class="bento-illus">
+            <div class="illus-dup">
+              <div class="dup-receipt">
+                <div class="rline"></div><div class="rline short"></div><div class="rline total"></div>
+              </div>
+              <div style="font-size:16px;color:var(--faint)">→</div>
+              <div class="dup-blocked">✗</div>
+            </div>
+          </div>
+        </div>
+        <div class="expand-body">
+          <div class="expand-detail" data-i18n="features.f6_more">Каждый чек получает perceptual hash (pHash). При загрузке нового чека система считает расстояние Хэмминга до уже сохранённых. Если совпадение ≥95% — предупреждение о дубле. Можно сохранить принудительно.</div>
+        </div>
+        <div class="expand-trigger">
+          <span data-i18n="features.expand_more">Подробнее</span>
+          <div class="expand-icon">+</div>
+        </div>
+      </div>
+
+      <!-- F7 — Tags (wide) -->
+      <div class="bento-card expandable tilt" data-animate data-delay="80">
+        <div class="bento-icon bento-icon-violet">🏷️</div>
+        <div class="bento-title" data-i18n="features.f7_title">112 тегов</div>
+        <div class="bento-text" data-i18n="features.f7_text">Где, с кем, по какому поводу — полный поведенческий профиль трат.</div>
+        <div class="illus-tags" style="margin-top:12px">
+          <span class="tag-pill tag-v">📍 Дом</span>
+          <span class="tag-pill tag-s">👫 С другом</span>
+          <span class="tag-pill tag-g">🎉 Праздник</span>
+          <span class="tag-pill tag-a">🍕 Кафе</span>
+          <span class="tag-pill tag-v">🛒 Магазин</span>
+          <span class="tag-pill tag-s">🏋️ Спорт</span>
+        </div>
+        <div class="expand-body">
+          <div class="expand-detail" data-i18n="features.f7_more">112 тегов в 15 группах: место, компания, повод, настроение, тип магазина, привычки. Теги назначаются вручную при сохранении чека. Admin-панель показывает матрицу тегов и инсайты о ваших привычках.</div>
+        </div>
+        <div class="expand-trigger">
+          <span data-i18n="features.expand_more">Подробнее</span>
+          <div class="expand-icon">+</div>
+        </div>
+      </div>
+
+      <!-- F8 — Telegram (wide) -->
+      <div class="bento-card expandable tilt" data-animate data-delay="120">
+        <div class="bento-icon bento-icon-sky" style="font-size:26px">✈️</div>
+        <div class="bento-title" data-i18n="features.f8_title">Прямо в Telegram</div>
+        <div class="bento-text" data-i18n="features.f8_text">Не нужно новое приложение. 900M уже используют Telegram — просто найдите бота и нажмите Start.</div>
+        <div style="margin-top:14px;display:flex;align-items:center;gap:8px">
+          <div style="background:rgba(14,165,233,0.12);border:1px solid rgba(14,165,233,0.2);border-radius:8px;padding:8px 14px;font-size:13px;font-weight:600;color:#38bdf8;font-family:var(--mono)">@FinVision_AI_bot</div>
+          <div style="font-size:12px;color:var(--faint)" data-i18n="features.f8_find">найдите в поиске</div>
+        </div>
+        <div class="expand-body">
+          <div class="expand-detail" data-i18n="features.f8_more">Telegram доступен на iOS, Android, Windows, Mac, Linux, Web. Бот работает на всех платформах без дополнительной настройки. История чатов синхронизируется. Ваши расходы — всегда под рукой.</div>
+        </div>
+        <div class="expand-trigger">
+          <span data-i18n="features.expand_more">Подробнее</span>
+          <div class="expand-icon">+</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ MARQUEE ════════════════════════════════════════════ -->
+<div class="marquee-section">
+  <div class="marquee-label" data-i18n="marquee.label">Поддерживает 30 валют и 6 языков</div>
+  <div class="marquee-track">
+    <div class="marquee-inner">
+      <div class="marquee-item"><span class="marquee-flag">🇷🇺</span> Рубль · RUB</div>
+      <div class="marquee-item"><span class="marquee-flag">🇺🇸</span> Dollar · USD</div>
+      <div class="marquee-item"><span class="marquee-flag">🇨🇳</span> Yuan · CNY</div>
+      <div class="marquee-item"><span class="marquee-flag">🇰🇬</span> Som · KGS</div>
+      <div class="marquee-item"><span class="marquee-flag">🇫🇷</span> Euro · EUR</div>
+      <div class="marquee-item"><span class="marquee-flag">🇧🇷</span> Real · BRL</div>
+      <div class="marquee-item"><span class="marquee-flag">🇬🇧</span> Pound · GBP</div>
+      <div class="marquee-item"><span class="marquee-flag">🇯🇵</span> Yen · JPY</div>
+      <div class="marquee-item"><span class="marquee-flag">🇦🇪</span> Dirham · AED</div>
+      <div class="marquee-item"><span class="marquee-flag">🇨🇦</span> CAD</div>
+      <div class="marquee-item"><span class="marquee-flag">🇰🇿</span> Tenge · KZT</div>
+      <div class="marquee-item"><span class="marquee-flag">🇮🇳</span> Rupee · INR</div>
+      <div class="marquee-item"><span class="marquee-flag">🇨🇭</span> Franc · CHF</div>
+      <div class="marquee-item"><span class="marquee-flag">🇸🇬</span> SGD</div>
+      <div class="marquee-item"><span class="marquee-flag">🇹🇷</span> Lira · TRY</div>
+      <!-- Duplicate for seamless loop -->
+      <div class="marquee-item"><span class="marquee-flag">🇷🇺</span> Рубль · RUB</div>
+      <div class="marquee-item"><span class="marquee-flag">🇺🇸</span> Dollar · USD</div>
+      <div class="marquee-item"><span class="marquee-flag">🇨🇳</span> Yuan · CNY</div>
+      <div class="marquee-item"><span class="marquee-flag">🇰🇬</span> Som · KGS</div>
+      <div class="marquee-item"><span class="marquee-flag">🇫🇷</span> Euro · EUR</div>
+      <div class="marquee-item"><span class="marquee-flag">🇧🇷</span> Real · BRL</div>
+      <div class="marquee-item"><span class="marquee-flag">🇬🇧</span> Pound · GBP</div>
+      <div class="marquee-item"><span class="marquee-flag">🇯🇵</span> Yen · JPY</div>
+      <div class="marquee-item"><span class="marquee-flag">🇦🇪</span> Dirham · AED</div>
+      <div class="marquee-item"><span class="marquee-flag">🇨🇦</span> CAD</div>
+      <div class="marquee-item"><span class="marquee-flag">🇰🇿</span> Tenge · KZT</div>
+      <div class="marquee-item"><span class="marquee-flag">🇮🇳</span> Rupee · INR</div>
+      <div class="marquee-item"><span class="marquee-flag">🇨🇭</span> Franc · CHF</div>
+      <div class="marquee-item"><span class="marquee-flag">🇸🇬</span> SGD</div>
+      <div class="marquee-item"><span class="marquee-flag">🇹🇷</span> Lira · TRY</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ AI ══════════════════════════════════════════════════ -->
+<section class="ai-section section" id="ai">
+  <div class="container">
+    <div class="ai-header">
+      <span class="section-label" data-i18n="ai.label">Технологии</span>
+      <h2 class="section-title" data-animate>
+        <span data-i18n="ai.title">Не один AI —</span><br>
+        <span class="gradient-text" data-i18n="ai.title_accent">команда из пяти</span>
+      </h2>
+      <p class="section-subtitle" data-animate data-delay="60" data-i18n="ai.subtitle">
+        Каждый агент оптимизирован под конкретную задачу. Нажмите — узнайте технические детали.
+      </p>
+    </div>
+
+    <div class="agents">
+
+      <div class="agent-card expandable" data-animate>
+        <div class="agent-header">
+          <div class="agent-num">01</div>
+          <div class="agent-body">
+            <div class="agent-name" data-i18n="ai.a1_name">Vision Agent</div>
+            <div class="agent-model" data-i18n="ai.a1_model">Gemma 4 31B</div>
+            <div class="agent-task" data-i18n="ai.a1_task">Читает фото чеков, извлекает структурированные данные</div>
+          </div>
+          <div class="expand-icon" style="margin-top:2px;flex-shrink:0">+</div>
+        </div>
+        <div class="expand-body">
+          <div class="agent-specs">
+            <div class="spec-item"><div class="spec-key" data-i18n="ai.spec_accuracy">Точность</div><div class="spec-val">85–95%</div></div>
+            <div class="spec-item"><div class="spec-key" data-i18n="ai.spec_speed">Скорость</div><div class="spec-val">3–8 с</div></div>
+            <div class="spec-item"><div class="spec-key" data-i18n="ai.spec_input">Вход</div><div class="spec-val">image/base64</div></div>
+            <div class="spec-item"><div class="spec-key" data-i18n="ai.spec_output">Выход</div><div class="spec-val">JSON</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="agent-card expandable" data-animate data-delay="60">
+        <div class="agent-header">
+          <div class="agent-num">02</div>
+          <div class="agent-body">
+            <div class="agent-name" data-i18n="ai.a2_name">Category Agent</div>
+            <div class="agent-model" data-i18n="ai.a2_model">Qwen 3.5 fast</div>
+            <div class="agent-task" data-i18n="ai.a2_task">Определяет категорию расхода из 19 категорий</div>
+          </div>
+          <div class="expand-icon" style="margin-top:2px;flex-shrink:0">+</div>
+        </div>
+        <div class="expand-body">
+          <div class="agent-specs">
+            <div class="spec-item"><div class="spec-key" data-i18n="ai.spec_accuracy">Точность</div><div class="spec-val">&gt;90%</div></div>
+            <div class="spec-item"><div class="spec-key" data-i18n="ai.spec_speed">Скорость</div><div class="spec-val">&lt;1 с</div></div>
+            <div class="spec-item"><div class="spec-key" data-i18n="ai.spec_mode">Режим</div><div class="spec-val">think: false</div></div>
+            <div class="spec-item"><div class="spec-key" data-i18n="ai.spec_cats">Категорий</div><div class="spec-val">19 + 60+</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="agent-card expandable" data-animate data-delay="100">
+        <div class="agent-header">
+          <div class="agent-num">03</div>
+          <div class="agent-body">
+            <div class="agent-name" data-i18n="ai.a3_name">Intent Agent</div>
+            <div class="agent-model" data-i18n="ai.a3_model">Qwen 3.5 fast</div>
+            <div class="agent-task" data-i18n="ai.a3_task">Понимает свободный текст: «потратил 500 на такси»</div>
+          </div>
+          <div class="expand-icon" style="margin-top:2px;flex-shrink:0">+</div>
+        </div>
+        <div class="expand-body">
+          <div class="agent-specs">
+            <div class="spec-item"><div class="spec-key" data-i18n="ai.spec_intents">Намерений</div><div class="spec-val">8</div></div>
+            <div class="spec-item"><div class="spec-key" data-i18n="ai.spec_langs">Языков</div><div class="spec-val">6</div></div>
+            <div class="spec-item"><div class="spec-key" data-i18n="ai.spec_speed">Скорость</div><div class="spec-val">&lt;0.5 с</div></div>
+            <div class="spec-item"><div class="spec-key" data-i18n="ai.spec_confirm">Подтверждение</div><div class="spec-val">если &lt;80%</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="agent-card expandable" data-animate data-delay="140">
+        <div class="agent-header">
+          <div class="agent-num">04</div>
+          <div class="agent-body">
+            <div class="agent-name" data-i18n="ai.a4_name">Moderation Agent</div>
+            <div class="agent-model" data-i18n="ai.a4_model">Qwen 3.5 fast</div>
+            <div class="agent-task" data-i18n="ai.a4_task">Защита от взлома и prompt injection в реальном времени</div>
+          </div>
+          <div class="expand-icon" style="margin-top:2px;flex-shrink:0">+</div>
+        </div>
+        <div class="expand-body">
+          <div class="agent-specs">
+            <div class="spec-item"><div class="spec-key" data-i18n="ai.spec_blocks">Блокировок</div><div class="spec-val">5 типов</div></div>
+            <div class="spec-item"><div class="spec-key" data-i18n="ai.spec_ban">Автобан</div><div class="spec-val">3+ / час</div></div>
+            <div class="spec-item"><div class="spec-key" data-i18n="ai.spec_log">Логирование</div><div class="spec-val">все инциденты</div></div>
+            <div class="spec-item"><div class="spec-key" data-i18n="ai.spec_speed">Скорость</div><div class="spec-val">&lt;0.3 с</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="agent-card expandable" data-animate data-delay="180">
+        <div class="agent-header">
+          <div class="agent-num">05</div>
+          <div class="agent-body">
+            <div class="agent-name" data-i18n="ai.a5_name">Analytics Agent</div>
+            <div class="agent-model" data-i18n="ai.a5_model">Qwen 3.5 think</div>
+            <div class="agent-task" data-i18n="ai.a5_task">Глубокий анализ, тренды, аномалии, советы</div>
+          </div>
+          <div class="expand-icon" style="margin-top:2px;flex-shrink:0">+</div>
+        </div>
+        <div class="expand-body">
+          <div class="agent-specs">
+            <div class="spec-item"><div class="spec-key" data-i18n="ai.spec_mode">Режим</div><div class="spec-val">think: true</div></div>
+            <div class="spec-item"><div class="spec-key" data-i18n="ai.spec_analyses">Анализов</div><div class="spec-val">5 типов</div></div>
+            <div class="spec-item"><div class="spec-key" data-i18n="ai.spec_when">Когда</div><div class="spec-val">по запросу</div></div>
+            <div class="spec-item"><div class="spec-key" data-i18n="ai.spec_period">Период</div><div class="spec-val">до 12 мес</div></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="ai-privacy" data-animate>
+      <div class="ai-privacy-icon">🔒</div>
+      <div>
+        <div class="ai-privacy-title" data-i18n="ai.privacy_title">Данные остаются у вас</div>
+        <div class="ai-privacy-text" data-i18n="ai.privacy_text">Основные агенты работают на локальных моделях (LM Studio + Ollama). Облачный fallback через together.ai — только если локальные недоступны. Переключение в реальном времени через admin-панель.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ COMPARE ════════════════════════════════════════════ -->
+<section class="compare section" id="compare">
+  <div class="container">
+    <div class="compare-header">
+      <span class="section-label" data-i18n="compare.label">Сравнение</span>
+      <h2 class="section-title" data-animate>
+        <span data-i18n="compare.title">Почему</span><br>
+        <span class="gradient-text" data-i18n="compare.title_accent">FinVision?</span>
+      </h2>
+    </div>
+    <div class="compare-wrap" data-animate>
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th data-i18n="compare.col_feature">Функция</th>
+            <th class="col-fv">FinVision <span class="tag-fv">№1</span></th>
+            <th data-i18n="compare.col_comp">Конкуренты</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td data-i18n="compare.r1">Фото чека → авто-ввод</td><td class="col-fv"><span class="check">✓</span></td><td><span class="cross">✗</span></td></tr>
+          <tr><td data-i18n="compare.r2">Работает в Telegram</td><td class="col-fv"><span class="check">✓</span></td><td><span class="cross">✗</span></td></tr>
+          <tr><td data-i18n="compare.r3">Локальный AI (приватность)</td><td class="col-fv"><span class="check">✓</span></td><td><span class="cross">✗</span></td></tr>
+          <tr><td data-i18n="compare.r4">Бесплатный триал</td><td class="col-fv" data-i18n="compare.v_trial_fv">60 дней</td><td data-i18n="compare.v_trial_comp">7–14 дней</td></tr>
+          <tr><td data-i18n="compare.r5">Цена в месяц</td><td class="col-fv" data-i18n="compare.v_price_fv">$2.50</td><td data-i18n="compare.v_price_comp">$4–10</td></tr>
+          <tr><td data-i18n="compare.r6">6 языков</td><td class="col-fv"><span class="check">✓</span></td><td data-i18n="compare.v_langs_comp">Частично</td></tr>
+          <tr><td data-i18n="compare.r7">Умная AI-аналитика</td><td class="col-fv"><span class="check">✓</span></td><td data-i18n="compare.v_analytics_comp">Базовая</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ PRICING ════════════════════════════════════════════ -->
+<section class="pricing section" id="pricing">
+  <div class="container">
+    <div class="pricing-header">
+      <span class="section-label" data-i18n="pricing.label">Цены</span>
+      <h2 class="section-title" data-animate>
+        <span data-i18n="pricing.title">Простые,</span><br>
+        <span class="gradient-text" data-i18n="pricing.title_accent">честные цены</span>
+      </h2>
+      <p class="section-subtitle pricing-note-top" data-animate data-delay="60" data-i18n="pricing.subtitle">
+        Начните бесплатно. Без кредитной карты. Отмена в любой момент.
+      </p>
+    </div>
+    <div class="pricing-cards">
+      <!-- Free -->
+      <div class="pricing-card tilt" data-animate>
+        <div class="pricing-name" data-i18n="pricing.p1_name">Пробный период</div>
+        <div class="pricing-price" data-i18n="pricing.p1_price">Бесплатно</div>
+        <div class="pricing-period" data-i18n="pricing.p1_period">60 дней</div>
+        <div class="pricing-divider"></div>
+        <ul class="pricing-features">
+          <li data-i18n="pricing.f1">Все функции без ограничений</li>
+          <li data-i18n="pricing.f2">Фото чеков и текстовый ввод</li>
+          <li data-i18n="pricing.f3">Полные отчёты и AI-аналитика</li>
+          <li data-i18n="pricing.f4">6 языков · 30 валют</li>
+          <li data-i18n="pricing.f5">Grace period 7 дней</li>
+        </ul>
+        <a href="https://t.me/FinVision_AI_bot" target="_blank" rel="noopener"
+           class="pricing-cta pricing-cta-secondary" data-i18n="pricing.p1_cta">Начать бесплатно</a>
+      </div>
+      <!-- Monthly -->
+      <div class="pricing-card tilt" data-animate data-delay="80">
+        <div class="pricing-name" data-i18n="pricing.p2_name">Ежемесячный</div>
+        <div class="pricing-price">$2<span style="font-size:24px;font-weight:500">.50</span></div>
+        <div class="pricing-period" data-i18n="pricing.p2_period">в месяц</div>
+        <div class="pricing-divider"></div>
+        <ul class="pricing-features">
+          <li data-i18n="pricing.f1">Все функции без ограничений</li>
+          <li data-i18n="pricing.f2">Фото чеков и текстовый ввод</li>
+          <li data-i18n="pricing.f3">Полные отчёты и AI-аналитика</li>
+          <li data-i18n="pricing.f4">6 языков · 30 валют</li>
+          <li data-i18n="pricing.f5">Grace period 7 дней</li>
+        </ul>
+        <a href="https://t.me/FinVision_AI_bot" target="_blank" rel="noopener"
+           class="pricing-cta pricing-cta-secondary" data-i18n="pricing.p2_cta">Выбрать план</a>
+      </div>
+      <!-- Annual — highlight -->
+      <div class="pricing-card highlight tilt" data-animate data-delay="160">
+        <div class="pricing-badge">⭐ <span data-i18n="pricing.p3_badge">Лучший выбор</span></div>
+        <div class="pricing-name" data-i18n="pricing.p3_name">Годовой</div>
+        <div class="pricing-price">$26<span style="font-size:24px;font-weight:500">.40</span></div>
+        <div class="pricing-period" data-i18n="pricing.p3_period">в год</div>
+        <div class="pricing-save" data-i18n="pricing.p3_save">Экономия 12% · $2.20/мес</div>
+        <div class="pricing-divider"></div>
+        <ul class="pricing-features">
+          <li data-i18n="pricing.f1">Все функции без ограничений</li>
+          <li data-i18n="pricing.f2">Фото чеков и текстовый ввод</li>
+          <li data-i18n="pricing.f3">Полные отчёты и AI-аналитика</li>
+          <li data-i18n="pricing.f4">6 языков · 30 валют</li>
+          <li data-i18n="pricing.f5">Grace period 7 дней</li>
+        </ul>
+        <a href="https://t.me/FinVision_AI_bot" target="_blank" rel="noopener"
+           class="pricing-cta pricing-cta-primary" data-i18n="pricing.p3_cta">Лучший выбор</a>
+      </div>
+    </div>
+    <div class="pricing-footnote" data-i18n="pricing.note">Оплата через Telegram Payments</div>
+  </div>
+</section>
+
+<!-- ═══════ FAQ ════════════════════════════════════════════════ -->
+<section class="faq section" id="faq">
+  <div class="container">
+    <div class="faq-header">
+      <span class="section-label" data-i18n="faq.label">FAQ</span>
+      <h2 class="section-title" data-animate>
+        <span data-i18n="faq.title">Частые</span><br>
+        <span class="gradient-text" data-i18n="faq.title_accent">вопросы</span>
+      </h2>
+    </div>
+    <div class="faq-list" data-animate>
+      <div class="faq-item">
+        <div class="faq-q"><span data-i18n="faq.q1">Чем FinVision отличается?</span><div class="faq-icon">+</div></div>
+        <div class="faq-a"><p data-i18n="faq.a1"></p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span data-i18n="faq.q2">Насколько точно AI читает чеки?</span><div class="faq-icon">+</div></div>
+        <div class="faq-a"><p data-i18n="faq.a2"></p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span data-i18n="faq.q3">Мои данные в безопасности?</span><div class="faq-icon">+</div></div>
+        <div class="faq-a"><p data-i18n="faq.a3"></p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span data-i18n="faq.q4">Нужно ли что-то кроме Telegram?</span><div class="faq-icon">+</div></div>
+        <div class="faq-a"><p data-i18n="faq.a4"></p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span data-i18n="faq.q5">Что будет после триала?</span><div class="faq-icon">+</div></div>
+        <div class="faq-a"><p data-i18n="faq.a5"></p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span data-i18n="faq.q6">Можно добавлять расходы текстом?</span><div class="faq-icon">+</div></div>
+        <div class="faq-a"><p data-i18n="faq.a6"></p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ FINAL CTA ══════════════════════════════════════════ -->
+<section class="final-cta" id="cta">
+  <div class="cta-glow"></div>
+  <div class="container">
+    <h2 class="cta-title" data-animate>
+      <span data-i18n="cta.title">Начните контролировать</span><br>
+      <span class="animated-gradient" data-i18n="cta.title_accent">деньги прямо сейчас</span>
+    </h2>
+    <p class="cta-sub" data-animate data-delay="80" data-i18n="cta.subtitle">
+      60 дней бесплатно. Без кредитной карты. Прямо в Telegram.
+    </p>
+    <a href="https://t.me/FinVision_AI_bot" target="_blank" rel="noopener"
+       class="cta-btn" data-animate data-delay="140" data-i18n="cta.btn">
+      Открыть в Telegram →
+    </a>
+    <span class="cta-username" data-animate data-delay="180" data-i18n="cta.username">@FinVision_AI_bot</span>
+    <div class="cta-features" data-animate data-delay="220">
+      <div class="cta-feat-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round"><path d="M20 6L9 17L4 12"/></svg>
+        <span data-i18n="cta.f1">Без кредитной карты</span>
+      </div>
+      <div class="cta-feat-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round"><path d="M20 6L9 17L4 12"/></svg>
+        <span data-i18n="cta.f2">Отмена в любой момент</span>
+      </div>
+      <div class="cta-feat-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round"><path d="M20 6L9 17L4 12"/></svg>
+        <span data-i18n="cta.f3">60 дней все функции бесплатно</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ═══════ FOOTER ════════════════════════════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="footer-logo">Fin<span>Vision</span></a>
+        <div class="footer-tagline" data-i18n="footer.tagline">Умный учёт финансов в Telegram</div>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <div class="footer-col-title" data-i18n="footer.col_product">Продукт</div>
+          <a href="#features" data-i18n="footer.features">Возможности</a>
+          <a href="#pricing"  data-i18n="footer.pricing">Цены</a>
+          <a href="#faq"      data-i18n="footer.faq">FAQ</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title" data-i18n="footer.col_legal">Правовое</div>
+          <a href="#" data-i18n="footer.privacy">Конфиденциальность</a>
+          <a href="#" data-i18n="footer.terms">Условия использования</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Telegram</div>
+          <a href="https://t.me/FinVision_AI_bot" target="_blank" rel="noopener">@FinVision_AI_bot</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copyright" data-i18n="footer.copyright">© 2026 FinVision AI. Все права защищены.</span>
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="ru">RU</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════ PHONE MOCKUP STYLES ═══════════════════════════════ -->
+<style>
+.phone-mockup { width: 280px; filter: drop-shadow(0 40px 80px rgba(0,0,0,0.5)); }
+.phone-frame { background: #1a1a1f; border-radius: 40px; border: 1.5px solid rgba(255,255,255,0.12); padding: 12px; position: relative; }
+.phone-notch { width: 80px; height: 8px; background: #09090b; border-radius: 0 0 10px 10px; margin: 0 auto 8px; }
+.phone-screen { background: #09090b; border-radius: 30px; overflow: hidden; min-height: 520px; }
+.chat-header { display: flex; align-items: center; gap: 10px; padding: 14px 16px; border-bottom: 1px solid rgba(255,255,255,0.06); background: #111113; }
+.chat-avatar { width: 34px; height: 34px; border-radius: 50%; background: linear-gradient(135deg, #7c3aed, #0ea5e9); display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 800; color: #fff; flex-shrink: 0; }
+.chat-name { font-size: 13px; font-weight: 700; }
+.chat-status { font-size: 10px; color: #22c55e; }
+.chat-body { padding: 14px 12px; display: flex; flex-direction: column; gap: 10px; }
+.msg-user { display: flex; justify-content: flex-end; }
+.msg-photo-pill { background: rgba(124,58,237,0.2); border: 1px solid rgba(124,58,237,0.3); border-radius: 14px 14px 4px 14px; padding: 8px 14px; font-size: 11px; color: #a78bfa; max-width: 80%; }
+.msg-bot { display: flex; }
+.receipt-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 4px 14px 14px 14px; padding: 12px 14px; font-size: 11px; max-width: 90%; font-family: 'Inter', sans-serif; }
+.rc-top { display: flex; align-items: center; gap: 6px; margin-bottom: 10px; padding-bottom: 8px; border-bottom: 1px solid rgba(255,255,255,0.07); }
+.rc-check { color: #22c55e; font-weight: 700; }
+.rc-title { font-weight: 700; font-size: 12px; color: #fafafa; }
+.rc-row { display: flex; justify-content: space-between; align-items: center; padding: 3px 0; }
+.rc-k { color: #52525b; }
+.rc-v { color: #fafafa; font-weight: 500; }
+.rc-cat { color: #a78bfa; }
+.rc-actions { display: flex; gap: 6px; margin-top: 10px; padding-top: 8px; border-top: 1px solid rgba(255,255,255,0.07); }
+.rc-btn { font-family: inherit; font-size: 10px; font-weight: 600; border-radius: 6px; padding: 4px 10px; cursor: pointer; }
+.rc-save { background: rgba(34,197,94,0.15); border: 1px solid rgba(34,197,94,0.25); color: #4ade80; }
+.rc-edit { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #a1a1aa; }
+</style>
+
+<script src="js/i18n.js"></script>
+<script src="js/animations.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => I18n.init());
+</script>
+</body>
+</html>
