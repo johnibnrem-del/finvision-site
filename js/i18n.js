@@ -28,7 +28,7 @@ const I18n = (() => {
 
   async function load(lang) {
     try {
-      const res = await fetch(`/locales/${lang}.json`);
+      const res = await fetch(`locales/${lang}.json?v=3`);
       data = await res.json();
       current = lang;
       localStorage.setItem('fv_lang', lang);

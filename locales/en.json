@@ -8,8 +8,8 @@
   "hero": {
     "badge": "30 days free",
     "no_card": "no card",
-    "title_1": "Stop losing track",
-    "title_2": "of your money",
+    "title_1": "Every expense",
+    "title_2": "under control",
     "subtitle": "Snap a photo of your receipt — FinVision does the rest. The first AI bot that tracks every expense without a single tap.",
     "cta": "Start for free →",
     "note": "Already in Telegram · No app install needed"
@@ -106,8 +106,8 @@
     "f3_text": "Trends, anomalies, forecasts and personal savings tips every month.",
     "f3_more": "AnalyticsAgent compares periods, finds anomalies and gives concrete advice. Month-end forecast based on current spending pace.",
     "f4_title": "Privacy first",
-    "f4_text": "AI runs locally on your server. Your data never reaches Google or OpenAI.",
-    "f4_more": "Gemma 4 and Qwen 3.5 are deployed locally. No API calls to OpenAI or Google by default. Cloud fallback only if the local server is unavailable.",
+    "f4_text": "All data is processed locally. The model only receives anonymised information — never linked to your identity.",
+    "f4_more": "Your financial data never leaves your infrastructure in raw form. The model receives only anonymised, aggregated signals — no names, amounts or store details. Neither Google nor OpenAI ever sees your real transactions.",
     "f5_title": "6 languages · 30 currencies",
     "f5_text": "Russian, English, Chinese, Kyrgyz, French, Portuguese. Language is auto-detected.",
     "f5_more": "All messages, categories, reports and buttons are in the user's language. No setup needed — we detect language from Telegram. 30 currencies with regional sorting.",
@@ -180,9 +180,9 @@
     "r7": "Smart AI analytics",
     "v_yes": "Yes",
     "v_no": "No",
-    "v_trial_fv": "60 days",
+    "v_trial_fv": "30 days",
     "v_trial_comp": "7–14 days",
-    "v_price_fv": "$2.50",
+    "v_price_fv": "$3.99",
     "v_price_comp": "$4–10",
     "v_langs_comp": "Partial",
     "v_analytics_comp": "Basic"
@@ -201,7 +201,7 @@
     "p2_period": "per month",
     "p2_cta": "Choose plan",
     "p3_name": "Annual",
-    "p3_price": "$44.00",
+    "p3_price": "$44.05",
     "p3_period": "per year",
     "p3_save": "Save 8% · $3.67/mo",
     "p3_badge": "Best value",
@@ -210,7 +210,7 @@
     "f2": "Receipt photos & text input",
     "f3": "Full reports & AI analytics",
     "f4": "6 languages · 30 currencies",
-    "f5": "7-day grace period",
+    "f5": "Budget overspend alerts",
     "note": "Payments via Telegram Payments"
   },
   "faq": {
@@ -233,12 +233,12 @@
   "cta": {
     "title": "Start tracking your money",
     "title_accent": "right now",
-    "subtitle": "60 days free. No credit card. Already in Telegram.",
+    "subtitle": "30 days free. No credit card. Already in Telegram.",
     "btn": "Open in Telegram →",
     "username": "@FinVision_AI_bot",
     "f1": "No credit card",
     "f2": "Cancel anytime",
-    "f3": "60 days all features free"
+    "f3": "30 days all features free"
   },
   "footer": {
     "tagline": "Smart expense tracking in Telegram",
